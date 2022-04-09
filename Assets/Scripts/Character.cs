@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Character : Unit
 {
@@ -78,7 +79,8 @@ public class Character : Unit
 
     private void Shoot()
     {
-        Vector3 position = transform.position; position.y += 0.4F;
+        Vector3 position = transform.position; 
+        position.y += 0.4F;
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation) as Spear;
 
         newSpear.Parent = gameObject;
@@ -111,6 +113,10 @@ public class Character : Unit
         if (spear && spear.Parent != gameObject)
         {
             ReceiveDamage();
+        }
+        if (collider.tag == "NextLvl")
+        {
+            SceneManager.LoadScene("_SpaceLevel");
         }
     }
 }
