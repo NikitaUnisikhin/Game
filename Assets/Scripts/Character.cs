@@ -79,8 +79,8 @@ public class Character : Unit
     private void Shoot()
     {
         Vector3 position = transform.position; position.y += 0.4F;
-        Spear newSpear = Instantiate(spear, position, spear.transform.rotation) as Spear;
-
+        Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
+        newSpear.Sprite.flipX = !sprite.flipX;
         newSpear.Parent = gameObject;
         newSpear.Direction = newSpear.transform.right * (sprite.flipX ? -1.0F : 1.0F);
     }

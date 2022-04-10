@@ -16,6 +16,8 @@ public class Spear : MonoBehaviour
     }
 
     private SpriteRenderer sprite;
+    
+    public SpriteRenderer Sprite { set { sprite = value; } get { return sprite; } }
 
     private void Awake()
     {
