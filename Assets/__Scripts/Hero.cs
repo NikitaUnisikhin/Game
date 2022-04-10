@@ -19,7 +19,7 @@ public class Hero : MonoBehaviour
     private float _shieldLevel = 1;
 
     private GameObject lastTriggerGo = null;
-
+    private int deadCounts = 0;
     public delegate void WeaponFireDelegate();
     public WeaponFireDelegate fireDelegate;
 
@@ -122,6 +122,11 @@ public class Hero : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 Main.S.DelayedRestart(gameRestartDelay);
+                deadCounts++;
+                if (deadCounts >= 3)
+                {
+                    Main.S.DelayedRestart(gameRestartDelay);
+                }
             }
         }
     }

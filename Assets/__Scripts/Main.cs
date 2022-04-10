@@ -9,6 +9,7 @@ public class Main : MonoBehaviour
     static Dictionary<WeaponType, WeaponDefiniton> WEAP_DICT;
 
     [Header("Set In Inspector")]
+    public int restartCounts = 3;
     public GameObject[] prefabEnemies;
     public float enemySpawnPerSecond = 0.5f;
     public float enemyDefaultPadding = 1.5f;
@@ -71,12 +72,30 @@ public class Main : MonoBehaviour
 
     public void DelayedRestart(float delay)
     {
-        Invoke("Restart", delay);
+        if (restartCounts <= 0)
+        {
+            Invoke("ReturnToLevel", delay);
+        }
+        else
+        {
+            Invoke("Restart", delay);
+        }
+    }
+
+    public void DelayedReturnToLevel(float delay)
+    {
+        Invoke("ReturnToLevel", delay);
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene("_Scene_0");
+        SceneManager.LoadScene("_SpaceLevel");
+        restartCounts--;
+    }
+
+    public void ReturnToLevel()
+    {
+        SceneManager.LoadScene("_Level_1");
     }
 
     /// <summary>
