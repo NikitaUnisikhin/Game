@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Scripts\LivesBar.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
   </ItemGroup>

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Linq;
 
 public class ShootableMonster : Monster
@@ -22,18 +21,18 @@ public class ShootableMonster : Monster
 
     private SpriteRenderer sprite;
 
-    protected override void Awake()
+    protected void Awake()
     {
         spear = Resources.Load<Spear>("Spear");
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
-    protected override void Start()
+    protected void Start()
     {
         InvokeRepeating("Shoot", rate, rate);
         direction = -transform.right;
     }
-    protected override void Update()
+    protected void Update()
     {
         Move();
     }
@@ -48,6 +47,7 @@ public class ShootableMonster : Monster
         newSpear.Direction = -newSpear.transform.right * speed/2;
         newSpear.Color = SpearColor;
     }
+
     protected override void OnTriggerEnter2D(Collider2D collider)
     {
         Unit unit = collider.GetComponent<Unit>();
@@ -58,6 +58,7 @@ public class ShootableMonster : Monster
             else unit.ReceiveDamage();
         }
     }
+
     private void Move()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.5F + transform.right * direction.x * 0.5F, 0.1F);

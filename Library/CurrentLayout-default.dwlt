@@ -15,11 +15,15 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 43.2
-    width: 1536
-    height: 772.8
+    y: 42.666668
+    width: 1280
+    height: 637.3334
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Scene
+=======
+  m_Title: Hierarchy
+>>>>>>> origin/NikUnis
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,12 +47,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1536
     height: 722.8
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 113
+=======
+    width: 1280
+    height: 587.3334
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 80
+>>>>>>> origin/NikUnis
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,10 +77,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1112.8
     y: 0
     width: 423.19995
     height: 722.8
+=======
+    x: 883.3333
+    y: 0
+    width: 396.6667
+    height: 587.3334
+>>>>>>> origin/NikUnis
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -92,8 +112,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 307.2
     height: 324
+=======
+    width: 288.66666
+    height: 310
+>>>>>>> origin/NikUnis
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -117,9 +142,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 324
     width: 1112.8
     height: 398.8
+=======
+    y: 310
+    width: 883.3333
+    height: 277.33337
+>>>>>>> origin/NikUnis
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
@@ -148,8 +179,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1536
     height: 772.8
+=======
+    width: 1280
+    height: 637.3334
+>>>>>>> origin/NikUnis
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -173,7 +209,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1536
+=======
+    width: 1280
+>>>>>>> origin/NikUnis
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -197,8 +237,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 752.8
     width: 1536
+=======
+    y: 617.3334
+    width: 1280
+>>>>>>> origin/NikUnis
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -221,12 +266,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1112.8
     height: 722.8
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 73
+=======
+    width: 883.3333
+    height: 587.3334
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 16
+>>>>>>> origin/NikUnis
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,12 +300,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1112.8
     height: 324
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 48
+=======
+    width: 883.3333
+    height: 310
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 17
+>>>>>>> origin/NikUnis
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,10 +330,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 307.2
     y: 0
     width: 805.60004
     height: 324
+=======
+    x: 288.66666
+    y: 0
+    width: 594.6666
+    height: 310
+>>>>>>> origin/NikUnis
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -300,9 +370,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 397.6
     width: 1111.8
     height: 377.8
+=======
+    y: 382.6667
+    width: 882.3333
+    height: 256.33337
+>>>>>>> origin/NikUnis
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -325,11 +401,16 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Resources
   m_LastFoldersGridSize: -1
+<<<<<<< HEAD
   m_LastProjectPath: C:\Users\skomo\Game
+=======
+  m_LastProjectPath: C:\less\Game
+>>>>>>> origin/NikUnis
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 8a450000
     m_LastClickedID: 17802
     m_ExpandedIDs: 0000000076450000784500007a4500007c45000000ca9a3b
@@ -337,18 +418,36 @@ MonoBehaviour:
       m_UserAcceptedRename: 0
       m_Name: 
       m_OriginalName: 
+=======
+    m_SelectedIDs: 2e460000
+    m_LastClickedID: 17966
+    m_ExpandedIDs: 000000002246000024460000264600002846000000ca9a3b
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: Scenes
+      m_OriginalName: Scenes
+>>>>>>> origin/NikUnis
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
+<<<<<<< HEAD
       m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 0}
+=======
+      m_UserData: 17968
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 0
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 5}
+>>>>>>> origin/NikUnis
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -360,7 +459,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000076450000784500007a4500007c450000
+=======
+    m_ExpandedIDs: 0000000022460000244600002646000028460000
+>>>>>>> origin/NikUnis
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -387,7 +490,11 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
+=======
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> origin/NikUnis
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -404,7 +511,11 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 0}
+=======
+      m_ClientGUIView: {fileID: 5}
+>>>>>>> origin/NikUnis
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -436,10 +547,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1112.8
     y: 73.6
     width: 422.19995
     height: 701.8
+=======
+    x: 883.3334
+    y: 72.66667
+    width: 395.6667
+    height: 566.3334
+>>>>>>> origin/NikUnis
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -474,16 +592,28 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 73.6
     width: 306.2
     height: 303
+=======
+    y: 72.66667
+    width: 287.66666
+    height: 289
+>>>>>>> origin/NikUnis
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 62fbffff
+=======
+      m_SelectedIDs: 7ab4ffff
+      m_LastClickedID: -19334
+      m_ExpandedIDs: 5ab4ffff7ab4ffff5cf2ffff82f2ffffeaf8fffff4f8ffff7afaffff
+>>>>>>> origin/NikUnis
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -527,10 +657,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 307.2
     y: 73.6
     width: 803.60004
     height: 303
+=======
+    x: 288.6667
+    y: 72.66667
+    width: 592.6666
+    height: 289
+>>>>>>> origin/NikUnis
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -543,9 +680,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -4.3239236, y: 1.511486, z: -8.387934}
     speed: 2
     m_Value: {x: -4.3239236, y: 1.511486, z: -8.387934}
+=======
+    m_Target: {x: -0.4986856, y: -0.6700001, z: -1.0835696}
+    speed: 2
+    m_Value: {x: -0.4986856, y: -0.6700001, z: -1.0835696}
+>>>>>>> origin/NikUnis
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -596,9 +739,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 8.826679
     speed: 2
     m_Value: 8.826679
+=======
+    m_Target: 3.204383
+    speed: 2
+    m_Value: 3.204383
+>>>>>>> origin/NikUnis
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -643,10 +792,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 307.2
     y: 73.6
     width: 803.60004
     height: 303
+=======
+    x: 288.6667
+    y: 72.66667
+    width: 592.6666
+    height: 289
+>>>>>>> origin/NikUnis
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -654,7 +810,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 803.60004, y: 282}
+=======
+  m_TargetSize: {x: 592.6666, y: 268}
+>>>>>>> origin/NikUnis
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -669,10 +829,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -321.44003
     m_HBaseRangeMax: 321.44003
     m_VBaseRangeMin: -121.200005
     m_VBaseRangeMax: 121.200005
+=======
+    m_HBaseRangeMin: -197.55554
+    m_HBaseRangeMax: 197.55554
+    m_VBaseRangeMin: -89.333336
+    m_VBaseRangeMax: 89.333336
+>>>>>>> origin/NikUnis
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -689,17 +856,26 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
+<<<<<<< HEAD
       y: 0
       width: 803.60004
       height: 303
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 401.80002, y: 151.5}
+=======
+      y: 21
+      width: 592.6666
+      height: 268
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 296.3333, y: 134}
+>>>>>>> origin/NikUnis
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -401.80002
       y: -151.5
       width: 803.60004
@@ -707,6 +883,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1004.50006, y: 378.75}
+=======
+      x: -296.3333
+      y: -134
+      width: 592.6666
+      height: 268
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 888.99994, y: 433.5}
+>>>>>>> origin/NikUnis
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -732,10 +917,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 2249
     y: 726.5
     width: 920
     height: 250
+=======
+    x: 0
+    y: 382.6667
+    width: 882.3333
+    height: 256.33337
+>>>>>>> origin/NikUnis
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
