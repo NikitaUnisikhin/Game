@@ -4,29 +4,52 @@ using System.Linq;
 public class Bird : Monster
 {
     [SerializeField]
+    private float rate = 2.0F;
+    [SerializeField]
     private float speed = 2.0F;
 
-    public Rigidbody2D rb;
-    public LayerMask groundLayers;
+    private Vector3 direction;
+    private bool isFacingLeft = true;
     public Transform groundCheck;
-    bool isFacingRighy = true;
-    RaycastHit2D hit;
+    public LayerMask groundLayers;
+    public Rigidbody2D rb;
 
-    private void Update()
+    protected void Start()
     {
-        hit = Physics2D.Raycast(groundCheck.position, -transform.up, 1f, groundLayers);
+        InvokeRepeating("Shoot", rate, rate);
+        direction = -transform.right;
+    }
+    protected void Update()
+    {
+        Move();
     }
 
-    private void FixedUpdate()
+    protected override void OnTriggerEnter2D(Collider2D collider)
     {
-        if (hit.collider != false)
+        Unit unit = collider.GetComponent<Unit>();
+
+        if (unit && unit is Character)
         {
-            Debug.Log("Земля!");
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
+            else unit.ReceiveDamage();
         }
-        else
+    }
+
+    private void Move()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.5F + transform.right * direction.x * 0.5F, 0.1F);
+
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayers);
+
+        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>()) || groundInfo.collider == false)
         {
-            Debug.Log("Нет земли");
+            isFacingLeft = !isFacingLeft;
+            speed = -speed;
+            direction *= -1.0F;
+            transform.localScale = new Vector2(-transform.localScale.x, 1f);
         }
+        rb.velocity = new Vector2(-speed, rb.velocity.y);
+
     }
 
 }
