@@ -208,13 +208,13 @@ MonoBehaviour:
       - m_Target: {fileID: 235548551}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: ClickButton
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Levels
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &187886339
@@ -430,7 +430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.58414584, y: 0.28637037}
   m_AnchorMax: {x: 0.9412917, y: 0.43940744}
-  m_AnchoredPosition: {x: 0.480011, y: 0}
+  m_AnchoredPosition: {x: 0.47998047, y: 0}
   m_SizeDelta: {x: 1.6300049, y: -0.3199997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611208716
@@ -480,13 +480,13 @@ MonoBehaviour:
       - m_Target: {fileID: 235548551}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: ClickButton
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Settings
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &611208717
@@ -637,7 +637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.58414584, y: 0.12200001}
   m_AnchorMax: {x: 0.9412917, y: 0.27244446}
-  m_AnchoredPosition: {x: -0.5500183, y: -0.5}
+  m_AnchoredPosition: {x: -0.5500488, y: -0.5}
   m_SizeDelta: {x: 1.6699982, y: 0.6800003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834704460
@@ -686,14 +686,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 235548551}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ClickButton
-        m_Mode: 3
+        m_MethodName: Exit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Exit
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &834704461
@@ -1072,13 +1072,13 @@ MonoBehaviour:
       - m_Target: {fileID: 235548551}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: ClickButton
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: _Level_1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1790310785

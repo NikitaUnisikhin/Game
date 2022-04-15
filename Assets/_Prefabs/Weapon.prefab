@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8654360813717460830}
   - component: {fileID: 8654360813717460827}
   - component: {fileID: 8654360813717460824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 8654360814817450849}
   - component: {fileID: 8654360814817450850}
   - component: {fileID: 8654360814817450851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,9 +172,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8654360815114213440}
   - component: {fileID: 8654360815114213443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

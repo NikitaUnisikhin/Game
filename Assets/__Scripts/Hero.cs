@@ -123,9 +123,9 @@ public class Hero : MonoBehaviour
                 Destroy(this.gameObject);
                 Main.S.DelayedRestart(gameRestartDelay);
                 deadCounts++;
-                if (deadCounts >= 3)
+                if (deadCounts >= 1)
                 {
-                    Main.S.DelayedRestart(gameRestartDelay);
+                    Main.S.DelayedReturnToLevel(gameRestartDelay);
                 }
             }
         }
