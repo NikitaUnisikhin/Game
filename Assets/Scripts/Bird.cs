@@ -16,7 +16,6 @@ public class Bird : Monster
 
     protected void Start()
     {
-        InvokeRepeating("Shoot", rate, rate);
         direction = -transform.right;
     }
     protected void Update()
