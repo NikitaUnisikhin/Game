@@ -4,8 +4,6 @@ using System.Linq;
 public class Bird : Monster
 {
     [SerializeField]
-    private float rate = 2.0F;
-    [SerializeField]
     private float speed = 2.0F;
 
     private Vector3 direction;

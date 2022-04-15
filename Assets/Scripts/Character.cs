@@ -106,6 +106,8 @@ public class Character : Unit
         rigidbody.velocity = Vector3.zero;
         rigidbody.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
 
+        if (lives == 0) Die();
+
         Debug.Log(lives);
     }
 
