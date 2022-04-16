@@ -12,17 +12,17 @@ public class MoveableMonster : Monster
 
     private SpriteRenderer sprite;
 
-    protected override void Awake()
+    protected void Awake()
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
-    protected override void Start()
+    protected void Start()
     {
         direction = transform.right;
     }
 
-    protected override void Update()
+    protected void Update()
     {
         Move();
     }

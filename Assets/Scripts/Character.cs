@@ -20,9 +20,15 @@ public class Character : Unit
     [SerializeField]
     private float speed = 3.0F;
     [SerializeField]
-    private float jumpForce = 15.0F;
+    private float jumpForce = 10.0F;
 
     private bool isGrounded = false;
+    public Transform groudCheck;
+    public float checkRadius = 0.5f;
+    public LayerMask whatIsGround;
+
+    private int extraJumps;
+    public int extraJumpsValue = 1;
 
     private Spear spear;
 
@@ -48,16 +54,24 @@ public class Character : Unit
 
     private void FixedUpdate()
     {
-        CheckGround();
+        isGrounded = Physics2D.OverlapCircle(groudCheck.position, checkRadius, whatIsGround); 
     }
 
     private void Update()
     {
-        if (isGrounded) State = CharState.Idle;
+        if (isGrounded) 
+        {
+            State = CharState.Idle;
+            extraJumps = extraJumpsValue;
+        } 
 
         if (Input.GetButtonDown("Fire1")) Shoot();
         if (Input.GetButton("Horizontal")) Run();
-        if (isGrounded && Input.GetButtonDown("Jump")) Jump();
+        if (Input.GetButtonDown("Jump") && extraJumps > 0)
+        {
+            Jump();
+            extraJumps--;
+        }
     }
 
     private void Run()
@@ -73,7 +87,7 @@ public class Character : Unit
 
     private void Jump()
     {
-        rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        rigidbody.velocity = Vector2.up * jumpForce;
     }
 
     private void Shoot()
@@ -91,6 +105,8 @@ public class Character : Unit
 
         rigidbody.velocity = Vector3.zero;
         rigidbody.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
+
+        if (lives == 0) Die();
 
         Debug.Log(lives);
     }
