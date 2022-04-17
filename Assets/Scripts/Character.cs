@@ -11,7 +11,7 @@ public class Character : Unit
         get { return lives; }
         set
         {
-           if (value < 5) lives = value;
+            if (value < 5) lives = value;
             livesBar.Refresh();
         }
     }
@@ -27,16 +27,16 @@ public class Character : Unit
     public float checkRadius = 0.5f;
     public LayerMask whatIsGround;
 
-    private int extraJumps;
-    public int extraJumpsValue = 1;
-
-    private Spear spear;
-
     private CharState State
     {
         get { return (CharState)animator.GetInteger("State"); }
         set { animator.SetInteger("State", (int)value); }
     }
+
+    private int extraJumps;
+    public int extraJumpsValue = 1;
+
+    private Spear spear;
 
     new private Rigidbody2D rigidbody;
     private Animator animator;
@@ -54,7 +54,7 @@ public class Character : Unit
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groudCheck.position, checkRadius, whatIsGround); 
+        CheckGround();
     }
 
     private void Update()
@@ -63,7 +63,7 @@ public class Character : Unit
         {
             State = CharState.Idle;
             extraJumps = extraJumpsValue;
-        } 
+        }
 
         if (Input.GetButtonDown("Fire1")) Shoot();
         if (Input.GetButton("Horizontal")) Run();
@@ -107,8 +107,6 @@ public class Character : Unit
         rigidbody.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
 
         if (lives == 0) Die();
-
-        Debug.Log(lives);
     }
 
     private void CheckGround()
@@ -117,7 +115,10 @@ public class Character : Unit
 
         isGrounded = colliders.Length > 1;
 
-        if (!isGrounded) State = CharState.Jump;
+        if (!isGrounded)
+        {
+            State = CharState.Jump;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
