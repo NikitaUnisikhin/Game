@@ -30,6 +30,12 @@ public class Bird : Monster
             if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
             else unit.ReceiveDamage();
         }
+
+        Spear spear = collider.gameObject.GetComponent<Spear>();
+        if (spear)
+        {
+            ReceiveDamage();
+        }
     }
 
     private void Move()

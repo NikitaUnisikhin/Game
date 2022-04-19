@@ -73,7 +73,6 @@
     <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\Scripts\ShootableMonster.cs" />
     <Compile Include="Assets\__Scripts\Utils.cs" />
-    <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\__Scripts\Main.cs" />
@@ -81,6 +80,7 @@
     <Compile Include="Assets\__Scripts\Weapon.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
     <Compile Include="Assets\__Scripts\Shield.cs" />
+    <Compile Include="Assets\Scripts\Mammoth.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Bird.cs" />
@@ -88,7 +88,7 @@
     <Compile Include="Assets\__Scripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\__Scripts\PowerUp.cs" />
-    <Compile Include="Assets\Scripts\Mammoth.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Character : Unit
@@ -59,7 +59,7 @@ public class Character : Unit
 
     private void Update()
     {
-        if (isGrounded) 
+        if (isGrounded)
         {
             State = CharState.Idle;
             extraJumps = extraJumpsValue;

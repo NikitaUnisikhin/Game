@@ -7,13 +7,14 @@ public class Mammoth : Monster
 {
     [SerializeField]
     private int lives = 3;
-
+    private const float constantSpeed = 2.0F;
+    private const float time = 2.0F;
     public int Lives
     {
         get { return lives; }
         set
         {
-            if (value < 3) lives = value;
+            lives = value;
         }
     }
 
@@ -40,7 +41,20 @@ public class Mammoth : Monster
     }
     protected void Update()
     {
+        StartCoroutine(YourCoroutine());
         Move();
+
+    }
+    IEnumerator YourCoroutine()
+    {
+        yield return new WaitForSeconds(time);
+        if (Mathf.Abs(speed) == constantSpeed)
+            speed *= 2;
+        else if (isFacingLeft)
+            speed = constantSpeed;
+        else
+            speed = -constantSpeed;
+        StopAllCoroutines();
     }
 
     private void Hit()
@@ -53,8 +67,19 @@ public class Mammoth : Monster
 
         if (unit && unit is Character)
         {
-            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
-            else unit.ReceiveDamage();
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.6F) ReceiveDamage();
+            else
+            {
+                unit.ReceiveDamage();
+                if (Mathf.Abs(speed) == constantSpeed * 2)
+                    unit.ReceiveDamage();
+            }
+        }
+
+        Spear spear = collider.gameObject.GetComponent<Spear>();
+        if (spear)
+        {
+            ReceiveDamage();
         }
     }
 
@@ -64,7 +89,7 @@ public class Mammoth : Monster
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayers);
 
-        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>()) || groundInfo.collider == false)
+        if (colliders.Length > 3 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>()) || groundInfo.collider == false)
         {
             isFacingLeft = !isFacingLeft;
             speed = -speed;
@@ -81,6 +106,6 @@ public class Mammoth : Monster
         rb.velocity = Vector3.zero;
         rb.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
 
-        if (lives == 0) Die();
+        if (lives <= 0) Die();
     }
 }
