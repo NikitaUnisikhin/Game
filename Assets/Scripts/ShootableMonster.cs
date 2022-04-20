@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Linq;
 
 public class ShootableMonster : Monster
@@ -39,12 +39,12 @@ public class ShootableMonster : Monster
 
     private void Shoot()
     {
-        Vector3 position = transform.position;          position.y += 0.5F;
+        Vector3 position = transform.position; position.y += 0.5F;
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
 
         newSpear.Parent = gameObject;
         newSpear.Sprite.flipX = !isFacingLeft;
-        newSpear.Direction = -newSpear.transform.right * speed/2;
+        newSpear.Direction = -newSpear.transform.right * speed / 2;
         newSpear.Color = SpearColor;
     }
 

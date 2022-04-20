@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\CenterOfMass.cs" />
     <Compile Include="Assets\Scripts\MoveableMonster.cs" />
     <Compile Include="Assets\__Scripts\Enemy_1.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\__Scripts\Enemy.cs" />
     <Compile Include="Assets\__Scripts\Hero.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\ParallaxBackground_0.cs" />
@@ -88,7 +89,6 @@
     <Compile Include="Assets\__Scripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\__Scripts\PowerUp.cs" />
-    <Compile Include="Assets\Scripts\Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />
