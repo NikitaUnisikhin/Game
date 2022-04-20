@@ -29,9 +29,17 @@ public class Mammoth : Monster
     public Rigidbody2D rb;
 
     private SpriteRenderer sprite;
+    private Animator animator;
+
+    private MammothState State
+    {
+        get { return (MammothState)animator.GetInteger("State"); }
+        set { animator.SetInteger("State", (int)value); }
+    }
 
     protected void Awake()
     {
+        animator = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -43,22 +51,26 @@ public class Mammoth : Monster
     {
         StartCoroutine(YourCoroutine());
         Move();
-
     }
     IEnumerator YourCoroutine()
     {
         yield return new WaitForSeconds(time);
         if (Mathf.Abs(speed) == constantSpeed)
+        {
+            State = MammothState.Boost;
             speed *= 2;
+        }
         else if (isFacingLeft)
+        {
+            State = MammothState.Run;
             speed = constantSpeed;
+        }
         else
+        {
+            State = MammothState.Run;
             speed = -constantSpeed;
+        }
         StopAllCoroutines();
-    }
-
-    private void Hit()
-    {
     }
 
     protected override void OnTriggerEnter2D(Collider2D collider)
@@ -108,4 +120,10 @@ public class Mammoth : Monster
 
         if (lives <= 0) Die();
     }
+}
+
+public enum MammothState
+{
+    Run,
+    Boost
 }

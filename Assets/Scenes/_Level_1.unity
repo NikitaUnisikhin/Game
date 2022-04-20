@@ -2521,7 +2521,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e42c3cf978e51f54a9f2f4af885f0e88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 956ff0fc24e435844be43f6bfec556ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3455,6 +3455,7 @@ GameObject:
   - component: {fileID: 1212652219}
   - component: {fileID: 1212652218}
   - component: {fileID: 1212652221}
+  - component: {fileID: 1212652222}
   m_Layer: 0
   m_Name: Mammoth
   m_TagString: Untagged
@@ -3543,6 +3544,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 1212652219}
+--- !u!95 &1212652222
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212652217}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a5f49fb7cdd8b524ca618518401def10, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1230048507
 GameObject:
   m_ObjectHideFlags: 0
