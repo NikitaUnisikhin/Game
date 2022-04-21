@@ -29,15 +29,18 @@ public class NPC : MonoBehaviour
             dialogeStart = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        panelDialog.SetActive(false);
-        dialogeStart = false;
-        iter = 0;
+        if (collision.tag == "Player")
+        {
+            panelDialog.SetActive(false);
+            dialogeStart = false;
+            iter = 2;
+        }
     }
     void Update()
     {
-        if (iter < message.Length && dialogeStart && Input.GetKeyDown(KeyCode.R))
+        if (iter < message.Length - 1 && dialogeStart && Input.GetKeyDown(KeyCode.R))
         {
             dialoge.text = message[++iter];
         }
