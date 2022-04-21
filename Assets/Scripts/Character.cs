@@ -4,14 +4,14 @@ using System.Collections;
 public class Character : Unit
 {
     [SerializeField]
-    private int lives = 5;
+    private int lives = 9;
 
     public int Lives
     {
         get { return lives; }
         set
         {
-            if (value < 5) lives = value;
+            if (value < 9) lives = value;
             livesBar.Refresh();
         }
     }
