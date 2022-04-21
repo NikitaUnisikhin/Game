@@ -99,7 +99,7 @@ public class Mammoth : Monster
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.3F + transform.right * direction.x * 0.5F, 0.1F);
 
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayers);
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.5f, groundLayers);
 
         if (colliders.Length > 3 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>()) || groundInfo.collider == false)
         {
