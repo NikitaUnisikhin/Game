@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class LivesBar : MonoBehaviour
@@ -15,7 +15,7 @@ public class LivesBar : MonoBehaviour
         for (int i = 0; i < hearts.Length; i++)
         {
             hearts[i] = transform.GetChild(i);
-            Debug.Log(i);
+            // Debug.Log(i);
         }
     }
 
