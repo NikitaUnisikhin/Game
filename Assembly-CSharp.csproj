@@ -90,10 +90,7 @@
     <Compile Include="Assets\__Scripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\__Scripts\PowerUp.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Robber.cs" />
-=======
->>>>>>> 9a2ee38fd784160c190e9f7d9905c3d3768975ae
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />

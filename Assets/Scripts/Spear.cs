@@ -43,8 +43,5 @@ public class Spear : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        if (collider.tag == "Ground")
-            Destroy(gameObject);
     }
 }
