@@ -11,6 +11,7 @@ TagManager:
   - Hero
   - PowerUpBox
   - ProjectileEnemy
+  - Generated
   layers:
   - Default
   - TransparentFX
