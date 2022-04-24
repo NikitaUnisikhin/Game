@@ -28,6 +28,7 @@ public class Character : Unit
     public Transform groudCheck;
     public float checkRadius = 0.5f;
     public LayerMask whatIsGround;
+    private float timer = 1f;
 
     private CharState State
     {
@@ -67,10 +68,11 @@ public class Character : Unit
             extraJumps = extraJumpsValue;
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
+        if (Input.GetButtonDown("Fire1") && timer <= 0)
             Shoot();
-        }
+        else 
+            timer -= Time.deltaTime;
+
         if (Input.GetButton("Horizontal")) Run();
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
@@ -101,6 +103,7 @@ public class Character : Unit
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
         newSpear.Parent = gameObject;
         newSpear.rigidbody.AddForce(new Vector2((sprite.flipX ? -1 : 1), 1) * force, ForceMode2D.Impulse);
+        timer = 1f;
     }
 
     public override void ReceiveDamage()
