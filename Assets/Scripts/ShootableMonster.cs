@@ -17,6 +17,7 @@ public class ShootableMonster : Monster
     public Transform groundCheck;
     public LayerMask groundLayers;
     public Rigidbody2D rb;
+    private float force = 5f;
 
 
     private SpriteRenderer sprite;
@@ -41,10 +42,8 @@ public class ShootableMonster : Monster
     {
         Vector3 position = transform.position; position.y += 0.5F;
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
-
         newSpear.Parent = gameObject;
-        newSpear.Sprite.flipX = !isFacingLeft;
-        newSpear.Direction = -newSpear.transform.right * speed / 2;
+        newSpear.rigidbody.AddForce(new Vector2((isFacingLeft ? -1 : 1), 1) * force, ForceMode2D.Impulse);
     }
 
     protected override void OnTriggerEnter2D(Collider2D collider)
