@@ -10,14 +10,12 @@ public class Spear : MonoBehaviour
     private Vector3 direction;
     public Vector3 Direction { set { direction = value; } }
 
-    public Color Color
-    {
-        set { sprite.color = value; }
-    }
-
     private SpriteRenderer sprite;
-    
     public SpriteRenderer Sprite { set { sprite = value; } get { return sprite; } }
+
+    new public Rigidbody2D rigidbody;
+    private bool isShot;
+    public float Force;
 
     private void Awake()
     {
@@ -26,20 +24,32 @@ public class Spear : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 1.4F);
+        rigidbody = GetComponent<Rigidbody2D>();
+        Destroy(gameObject, 1.5F);
+        isShot = true;
     }
-	
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, speed * Time.deltaTime);
+        Rotate();
+    }
+
+
+
+    private void Rotate()
+    {
+        if (isShot)
+        {
+            var direction = rigidbody.velocity;
+            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Unit unit = collider.GetComponent<Unit>();
-
-        if (unit && unit.gameObject != parent)
+        if ((unit && unit.gameObject != parent) || collider.tag == "Ground")
         {
             Destroy(gameObject);
         }

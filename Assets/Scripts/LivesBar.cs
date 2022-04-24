@@ -15,7 +15,6 @@ public class LivesBar : MonoBehaviour
         for (int i = 0; i < hearts.Length; i++)
         {
             hearts[i] = transform.GetChild(i);
-            // Debug.Log(i);
         }
     }
 
@@ -25,7 +24,6 @@ public class LivesBar : MonoBehaviour
         {
             if (i < character.Lives) hearts[i].gameObject.SetActive(true);
             else hearts[i].gameObject.SetActive(false);
-            Debug.Log(i);
         }
     }
 }
