@@ -99,9 +99,8 @@ public class Character : Unit
     {
         Vector3 position = transform.position; position.y += 0.4F;
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
-        newSpear.Sprite.flipX = !sprite.flipX;
         newSpear.Parent = gameObject;
-        newSpear.rigidbody.AddForce(new Vector2(1,1) * force, ForceMode2D.Impulse);
+        newSpear.rigidbody.AddForce(new Vector2((sprite.flipX ? -1 : 1), 1) * force, ForceMode2D.Impulse);
     }
 
     public override void ReceiveDamage()
