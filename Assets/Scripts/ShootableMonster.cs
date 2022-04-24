@@ -45,7 +45,6 @@ public class ShootableMonster : Monster
         newSpear.Parent = gameObject;
         newSpear.Sprite.flipX = !isFacingLeft;
         newSpear.Direction = -newSpear.transform.right * speed / 2;
-        newSpear.Color = SpearColor;
     }
 
     protected override void OnTriggerEnter2D(Collider2D collider)

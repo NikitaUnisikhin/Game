@@ -22,6 +22,8 @@ public class Character : Unit
     [SerializeField]
     private float jumpForce = 10.0F;
 
+    private float force = 5f;
+
     private bool isGrounded = false;
     public Transform groudCheck;
     public float checkRadius = 0.5f;
@@ -65,7 +67,10 @@ public class Character : Unit
             extraJumps = extraJumpsValue;
         }
 
-        if (Input.GetButtonDown("Fire1")) Shoot();
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
         if (Input.GetButton("Horizontal")) Run();
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
@@ -96,7 +101,7 @@ public class Character : Unit
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
         newSpear.Sprite.flipX = !sprite.flipX;
         newSpear.Parent = gameObject;
-        newSpear.Direction = newSpear.transform.right * (sprite.flipX ? -1.0F : 1.0F);
+        newSpear.rigidbody.AddForce(new Vector2(1,1) * force, ForceMode2D.Impulse);
     }
 
     public override void ReceiveDamage()
