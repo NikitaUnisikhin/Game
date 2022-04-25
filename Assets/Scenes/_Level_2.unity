@@ -2008,6 +2008,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 306626691805372108, guid: ac63f1a1d05012a44bd179952c3095b8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.19995117
+      objectReference: {fileID: 0}
+    - target: {fileID: 306626691805372108, guid: ac63f1a1d05012a44bd179952c3095b8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.9000244
+      objectReference: {fileID: 0}
     - target: {fileID: 306626692500027042, guid: ac63f1a1d05012a44bd179952c3095b8, type: 3}
       propertyPath: m_Name
       value: CanvasHeartChar
@@ -3806,6 +3814,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f987bc9b5f78446bca6361a79ebb16, type: 3}
+--- !u!1001 &3280530191021094045
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3280530189418859668, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_Name
+      value: Castle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 138.09015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3941396
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280530189418859670, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3dfa5e23c486fb4c8ca79d45efc7e15, type: 3}
 --- !u!1001 &4177286789381203308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3876,11 +3941,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3325586107308082840, guid: fb6a3e39dfe9ab84f91fa42540bee42a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 134.13
+      value: 138.13
       objectReference: {fileID: 0}
     - target: {fileID: 3325586107308082840, guid: fb6a3e39dfe9ab84f91fa42540bee42a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.49
+      value: 0.00999999
       objectReference: {fileID: 0}
     - target: {fileID: 3325586107308082840, guid: fb6a3e39dfe9ab84f91fa42540bee42a, type: 3}
       propertyPath: m_LocalPosition.z
