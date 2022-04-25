@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/_Level_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/_Level_2.unity
+    guid: c1f8336f38717ea40ad10446f9cae372
+  - enabled: 1
     path: Assets/Scenes/_SpaceLevel.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Levels.unity
     guid: b407ba52826697243ba2602f787f1742
+  - enabled: 1
+    path: Assets/Scenes/Maze3D.unity
+    guid: 5d929add4786241cda93f6ec823d21d4
   m_configObjects: {}
