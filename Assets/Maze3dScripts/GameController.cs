@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 [RequireComponent(typeof(MazeConstructor))]
 
@@ -72,8 +74,8 @@ public class GameController : MonoBehaviour
         {
             timeLabel.text = "TIME UP";
             player.enabled = false;
-
-            Invoke("StartNewGame", 4);
+            SceneManager.LoadScene("Menu");
+            /*Invoke("StartNewGame", 4);*/
         }
     }
 
