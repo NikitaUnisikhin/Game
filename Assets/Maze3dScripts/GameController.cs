@@ -95,7 +95,7 @@ public class GameController : MonoBehaviour
             Debug.Log("Finish!");
             player.enabled = false;
 
-            Invoke("StartNewMaze", 4);
+            Invoke("StartNewMaze", 3);
         }
     }
 }
