@@ -63,6 +63,5 @@ public class Robber : Monster
             transform.localScale = new Vector2(-transform.localScale.x, 1f);
         }
         rb.velocity = new Vector2(-speed, rb.velocity.y);
-
     }
 }

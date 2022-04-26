@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cannon : Monster
 {
     [SerializeField]
-    private float rate = 0.8F;
+    private float rate = 1F;
 
     private Shell shell;
     public Rigidbody2D rb;

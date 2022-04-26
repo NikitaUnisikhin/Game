@@ -106,6 +106,8 @@
     <Compile Include="Assets\SpaceScripts\PowerUp.cs" />
     <Compile Include="Assets\Scripts\Cannon.cs" />
     <Compile Include="Assets\Scripts\Shell.cs" />
+    <Compile Include="Assets\Scripts\Doctor.cs" />
+    <Compile Include="Assets\Scripts\LBForDoctor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />
