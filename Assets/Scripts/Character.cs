@@ -136,6 +136,12 @@ public class Character : Unit
         {
             ReceiveDamage();
         }
+
+        Shell shell = collider.gameObject.GetComponent<Shell>();
+        if (shell && shell.Parent != gameObject)
+        {
+            ReceiveDamage();
+        }
     }
 }
 

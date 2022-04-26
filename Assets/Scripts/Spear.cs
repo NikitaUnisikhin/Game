@@ -25,7 +25,7 @@ public class Spear : MonoBehaviour
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 1.5F);
+        Destroy(gameObject, 2F);
         isShot = true;
     }
 
