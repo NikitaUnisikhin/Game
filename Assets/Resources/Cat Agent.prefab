@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1072376396663389882}
   - component: {fileID: 1072376396663389829}
   - component: {fileID: 1072376396663389828}
-  - component: {fileID: 1072376396663389831}
   - component: {fileID: 7679612249143665693}
   m_Layer: 0
   m_Name: Cat Agent
@@ -82,26 +81,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1072376396663389831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072376396663389830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5605f76eff03cd140a1cb8442e77a23c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rate: 2
-  SpearColor: {r: 1, g: 1, b: 1, a: 1}
-  speed: 2
-  groundCheck: {fileID: 9140892730548908555}
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  rb: {fileID: 1072376396663389828}
 --- !u!95 &7679612249143665693
 Animator:
   serializedVersion: 3
