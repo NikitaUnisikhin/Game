@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1072376396663389829}
   - component: {fileID: 1072376396663389828}
   - component: {fileID: 7679612249143665693}
+  - component: {fileID: 7982360338321111054}
   m_Layer: 0
   m_Name: Cat Agent
   m_TagString: Untagged
@@ -47,7 +48,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.4}
+  m_Offset: {x: 0, y: 0.35}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58,7 +59,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.8}
+  m_Size: {x: 0.5, y: 0.7}
   m_EdgeRadius: 0
 --- !u!50 &1072376396663389828
 Rigidbody2D:
@@ -100,6 +101,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7982360338321111054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072376396663389830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d2e482a3596254180f5ffd4064ad84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 2
+  speed: 2
+  groundCheck: {fileID: 9140892730548908555}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  rb: {fileID: 1072376396663389828}
 --- !u!1 &1072376397901610602
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6658900614090995408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.53, z: 0}
+  m_LocalPosition: {x: -0.132, y: -0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1072376397901610603}

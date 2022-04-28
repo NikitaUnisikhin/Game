@@ -74,6 +74,7 @@
     <Compile Include="Assets\SpaceScripts\Projectile.cs" />
     <Compile Include="Assets\DeathCounter.cs" />
     <Compile Include="Assets\SpaceScripts\Enemy_3.cs" />
+    <Compile Include="Assets\Scripts\AgentBullet.cs" />
     <Compile Include="Assets\Maze3dScripts\MazeMeshGenerator.cs" />
     <Compile Include="Assets\Maze2D\Maze.cs" />
     <Compile Include="Assets\Scripts\Cannon.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\SpaceScripts\Weapon.cs" />
     <Compile Include="Assets\Maze3dScripts\FpsMovement.cs" />
     <Compile Include="Assets\Maze2D\Finish.cs" />
+    <Compile Include="Assets\Scripts\CatAgent.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
     <Compile Include="Assets\Maze2D\MazeSpawner.cs" />
     <Compile Include="Assets\Maze3dScripts\MazeConstructor.cs" />
@@ -108,6 +110,9 @@
     <Compile Include="Assets\SpaceScripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\SpaceScripts\PowerUp.cs" />
+    <Compile Include="Assets\Scripts\Bullets.cs" />
+    <Compile Include="Assets\Scripts\CatBoss.cs" />
+    <Compile Include="Assets\Scripts\LBForCatBoss.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />

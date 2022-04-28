@@ -6,8 +6,6 @@ public class ShootableMonster : Monster
     [SerializeField]
     private float rate = 2.0F;
     [SerializeField]
-    private Color SpearColor = Color.white;
-    [SerializeField]
     private float speed = 2.0F;
 
     private Spear spear;

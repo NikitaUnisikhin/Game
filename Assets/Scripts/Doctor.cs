@@ -12,6 +12,9 @@ public class Doctor : Monster
     [SerializeField]
     private float rate = 2F;
 
+    private float rateOfField = 3F;
+    private float RadiusOfField = 5F;
+
     public int Lives
     {
         get { return lives; }
@@ -35,6 +38,7 @@ public class Doctor : Monster
     protected void Awake()
     {
         shell = Resources.Load<Shell>("Shell");
+        InvokeRepeating("DamageByField", rateOfField, rateOfField);
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -46,6 +50,14 @@ public class Doctor : Monster
     protected void Update()
     {
         Move();
+    }
+
+    private void DamageByField()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, RadiusOfField);
+        Character character = FindObjectOfType<Character>();
+        if (colliders.Any(x => x.GetComponent<Character>()))
+            character.ReceiveDamage();
     }
 
     protected override void OnTriggerEnter2D(Collider2D collider)
