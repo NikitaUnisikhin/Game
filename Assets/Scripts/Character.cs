@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Character : Unit
 {
@@ -30,6 +31,8 @@ public class Character : Unit
     public LayerMask whatIsGround;
     private float timer = 1f;
 
+
+
     private CharState State
     {
         get { return (CharState)animator.GetInteger("State"); }
@@ -51,6 +54,7 @@ public class Character : Unit
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        GetComponent<AudioSource>().Play();
 
         spear = Resources.Load<Spear>("Spear");
     }
@@ -113,7 +117,10 @@ public class Character : Unit
         rigidbody.velocity = Vector3.zero;
         rigidbody.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
 
-        if (lives == 0) Die();
+        if (lives == 0)
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     private void CheckGround()
