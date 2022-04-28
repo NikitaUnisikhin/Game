@@ -148,6 +148,12 @@ public class Character : Unit
         {
             ReceiveDamage();
         }
+
+        Bullets bullets = collider.gameObject.GetComponent<Bullets>();
+        if (bullets && bullets.Parent != gameObject)
+        {
+            ReceiveDamage();
+        }
     }
 }
 
