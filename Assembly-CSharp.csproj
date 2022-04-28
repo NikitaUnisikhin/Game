@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Robber.cs" />
     <Compile Include="Assets\SpaceScripts\Enemy_4.cs" />
     <Compile Include="Assets\Maze2D\MazeGenerator.cs" />
+    <Compile Include="Assets\Scripts\Shell.cs" />
     <Compile Include="Assets\SpaceScripts\Enemy_2.cs" />
     <Compile Include="Assets\Maze3dScripts\MazeDataGenerator.cs" />
     <Compile Include="Assets\SpaceScripts\Parallax.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\SpaceScripts\Enemy_3.cs" />
     <Compile Include="Assets\Maze3dScripts\MazeMeshGenerator.cs" />
     <Compile Include="Assets\Maze2D\Maze.cs" />
+    <Compile Include="Assets\Scripts\Cannon.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\Scripts\ShootableMonster.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\Scripts\LBForMammoth.cs" />
     <Compile Include="Assets\SpaceScripts\Main.cs" />
     <Compile Include="Assets\Scripts\LivesBar.cs" />
+    <Compile Include="Assets\Scripts\Doctor.cs" />
     <Compile Include="Assets\SpaceScripts\Weapon.cs" />
     <Compile Include="Assets\Maze3dScripts\FpsMovement.cs" />
     <Compile Include="Assets\Maze2D\Finish.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Assets\Maze3dScripts\MazeConstructor.cs" />
     <Compile Include="Assets\SpaceScripts\Shield.cs" />
     <Compile Include="Assets\Scripts\Mammoth.cs" />
+    <Compile Include="Assets\Scripts\LBForDoctor.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Maze2D\PlayerControls.cs" />
@@ -104,10 +108,6 @@
     <Compile Include="Assets\SpaceScripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\SpaceScripts\PowerUp.cs" />
-    <Compile Include="Assets\Scripts\Cannon.cs" />
-    <Compile Include="Assets\Scripts\Shell.cs" />
-    <Compile Include="Assets\Scripts\Doctor.cs" />
-    <Compile Include="Assets\Scripts\LBForDoctor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />
