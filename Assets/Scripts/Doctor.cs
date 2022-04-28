@@ -12,6 +12,10 @@ public class Doctor : Monster
     [SerializeField]
     private float rate = 2F;
 
+    private float rateOfField = 3F;
+    private float RadiusOfField = 5F;
+
+
     public int Lives
     {
         get { return lives; }
@@ -41,6 +45,7 @@ public class Doctor : Monster
     protected void Start()
     {
         InvokeRepeating("Shoot", rate, rate);
+        InvokeRepeating("DamageByField", rateOfField, rateOfField);
         direction = -transform.right;
     }
     protected void Update()
@@ -73,6 +78,14 @@ public class Doctor : Monster
         newShell.Parent = gameObject;
         newShell.Sprite.flipX = !isFacingLeft;
         newShell.Direction = -newShell.transform.right * speed / 2;
+    }
+
+    private void DamageByField()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, RadiusOfField);
+        Character character = FindObjectOfType<Character>();
+        if (colliders.Any(x => x.GetComponent<Character>()))
+            character.ReceiveDamage();
     }
 
     private void Move()
