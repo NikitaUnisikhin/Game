@@ -142,6 +142,12 @@ public class Character : Unit
         {
             ReceiveDamage();
         }
+
+        AgentBullet agentBullet = collider.gameObject.GetComponent<AgentBullet>();
+        if (agentBullet && agentBullet.Parent != gameObject)
+        {
+            ReceiveDamage();
+        }
     }
 }
 

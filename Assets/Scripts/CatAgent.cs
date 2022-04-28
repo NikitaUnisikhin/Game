@@ -1,28 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class ShootableMonster : Monster
+public class CatAgent : Monster
 {
     [SerializeField]
     private float rate = 2.0F;
     [SerializeField]
     private float speed = 2.0F;
 
-    private Spear spear;
+    private AgentBullet agentBullet;
     private Vector3 direction;
 
     private bool isFacingLeft = true;
     public Transform groundCheck;
     public LayerMask groundLayers;
     public Rigidbody2D rb;
-    private float force = 5f;
-
 
     private SpriteRenderer sprite;
 
     protected void Awake()
     {
-        spear = Resources.Load<Spear>("Spear");
+        agentBullet = Resources.Load<AgentBullet>("AgentBullet");
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -39,9 +39,10 @@ public class ShootableMonster : Monster
     private void Shoot()
     {
         Vector3 position = transform.position; position.y += 0.5F;
-        Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
-        newSpear.Parent = gameObject;
-        newSpear.rigidbody.AddForce(new Vector2((isFacingLeft ? -1 : 1), 1) * force, ForceMode2D.Impulse);
+        AgentBullet newAgentBullet = Instantiate(agentBullet, position, agentBullet.transform.rotation);
+        newAgentBullet.Parent = gameObject;
+        newAgentBullet.Sprite.flipX = !isFacingLeft;
+        newAgentBullet.Direction = -newAgentBullet.transform.right * speed / 2;
     }
 
     protected override void OnTriggerEnter2D(Collider2D collider)
@@ -54,8 +55,8 @@ public class ShootableMonster : Monster
             else unit.ReceiveDamage();
         }
 
-        Spear spear = collider.gameObject.GetComponent<Spear>();
-        if (spear && spear.Parent != gameObject)
+        AgentBullet agentBullet = collider.gameObject.GetComponent<AgentBullet>();
+        if (agentBullet && agentBullet.Parent != gameObject)
         {
             ReceiveDamage();
         }
@@ -67,7 +68,7 @@ public class ShootableMonster : Monster
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayers);
 
-        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>()) || groundInfo.collider == false)
+        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<AgentBullet>()) || groundInfo.collider == false)
         {
             isFacingLeft = !isFacingLeft;
             speed = -speed;
