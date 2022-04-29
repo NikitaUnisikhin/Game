@@ -55,8 +55,8 @@ public class CatAgent : Monster
             else unit.ReceiveDamage();
         }
 
-        AgentBullet agentBullet = collider.gameObject.GetComponent<AgentBullet>();
-        if (agentBullet && agentBullet.Parent != gameObject)
+        Spear spear = collider.gameObject.GetComponent<Spear>();
+        if (spear && spear.Parent != gameObject)
         {
             ReceiveDamage();
         }

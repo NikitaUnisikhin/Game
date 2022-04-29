@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Maze3dScripts\GameController.cs" />
     <Compile Include="Assets\Scripts\LBForMammoth.cs" />
+    <Compile Include="Assets\Scripts\Transition1To2.cs" />
     <Compile Include="Assets\SpaceScripts\Main.cs" />
     <Compile Include="Assets\Scripts\LivesBar.cs" />
     <Compile Include="Assets\Scripts\Doctor.cs" />
@@ -99,11 +100,13 @@
     <Compile Include="Assets\Scripts\CatAgent.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
     <Compile Include="Assets\Maze2D\MazeSpawner.cs" />
+    <Compile Include="Assets\Scripts\TransitionEND.cs" />
     <Compile Include="Assets\Maze3dScripts\MazeConstructor.cs" />
     <Compile Include="Assets\SpaceScripts\Shield.cs" />
     <Compile Include="Assets\Scripts\Mammoth.cs" />
     <Compile Include="Assets\Scripts\LBForDoctor.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\Transition2To3.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Maze2D\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Bird.cs" />
@@ -113,9 +116,6 @@
     <Compile Include="Assets\SpaceScripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\SpaceScripts\PowerUp.cs" />
-    <Compile Include="Assets\Scripts\Transition1To2.cs" />
-    <Compile Include="Assets\Scripts\Transition2To3.cs" />
-    <Compile Include="Assets\Scripts\TransitionEND.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />

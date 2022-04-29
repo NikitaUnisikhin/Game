@@ -33,7 +33,7 @@ public class AgentBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Unit unit = collider.GetComponent<Unit>();
-        if (unit && unit.gameObject != parent)
+        if ((unit && unit.gameObject != parent) || collider.tag == "Ground")
         {
             Destroy(gameObject);
         }
