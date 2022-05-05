@@ -12,6 +12,7 @@ public class AgentBullet : MonoBehaviour
     public Vector3 Direction { set { direction = value; } }
 
     private SpriteRenderer sprite;
+    new public Rigidbody2D rigidbody;
 
     public SpriteRenderer Sprite { set { sprite = value; } get { return sprite; } }
 

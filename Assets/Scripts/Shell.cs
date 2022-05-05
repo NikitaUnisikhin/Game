@@ -11,6 +11,7 @@ public class Shell : MonoBehaviour
     public Vector3 Direction { set { direction = value; } }
 
     private SpriteRenderer sprite;
+    new public Rigidbody2D rigidbody;
 
     public SpriteRenderer Sprite { set { sprite = value; } get { return sprite; } }
 
@@ -34,7 +35,7 @@ public class Shell : MonoBehaviour
     {
         Unit unit = collider.GetComponent<Unit>();
 
-        if (unit && unit.gameObject != parent)
+        if (unit && unit.gameObject != parent || collider.tag == "Ground")
         {
             Destroy(gameObject);
         }
