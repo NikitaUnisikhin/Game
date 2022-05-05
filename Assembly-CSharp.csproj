@@ -90,7 +90,7 @@
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Maze3dScripts\GameController.cs" />
     <Compile Include="Assets\Scripts\LBForMammoth.cs" />
-    <Compile Include="Assets\Scripts\Transition1To2.cs" />
+    <Compile Include="Assets\Scripts\Transition1ToMaze.cs" />
     <Compile Include="Assets\SpaceScripts\Main.cs" />
     <Compile Include="Assets\Scripts\LivesBar.cs" />
     <Compile Include="Assets\Scripts\Doctor.cs" />
@@ -116,6 +116,7 @@
     <Compile Include="Assets\SpaceScripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\SpaceScripts\PowerUp.cs" />
+    <Compile Include="Assets\Scripts\Transition1To2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />

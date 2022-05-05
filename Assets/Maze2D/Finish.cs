@@ -10,7 +10,7 @@ public class Finish : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("_Level_2");
         }
     }
 }

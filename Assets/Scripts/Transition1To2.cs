@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Transition1To2 : MonoBehaviour
+public class Transition1Maze : MonoBehaviour
 {
     protected void OnTriggerEnter2D(Collider2D collider)
     {
@@ -11,7 +11,7 @@ public class Transition1To2 : MonoBehaviour
 
         if (unit && unit is Character)
         {
-            SceneManager.LoadScene("_Level_2");
+            SceneManager.LoadScene("Maze2D");
         }
     }
 }
