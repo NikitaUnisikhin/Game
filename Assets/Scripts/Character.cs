@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class Character : Unit
 {
@@ -127,7 +128,7 @@ public class Character : Unit
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.3F);
 
-        isGrounded = colliders.Length > 1;
+        isGrounded = colliders.Where(collider => collider.tag != "Invisible").ToArray().Length > 1;
 
         if (!isGrounded)
         {

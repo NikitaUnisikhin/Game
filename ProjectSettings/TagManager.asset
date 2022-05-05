@@ -12,6 +12,7 @@ TagManager:
   - PowerUpBox
   - ProjectileEnemy
   - Generated
+  - Invisible
   layers:
   - Default
   - TransparentFX
