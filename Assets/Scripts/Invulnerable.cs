@@ -5,12 +5,21 @@ using UnityEngine;
 public class Invulnerable : MonoBehaviour
 {
     public int time = 5;
+
+    private AudioSource BuffClip;
+
+    protected void Awake()
+    {
+        BuffClip = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Character character = collider.GetComponent<Character>();
 
         if (character)
         {
+            BuffClip.Play();
             character.setInvulnerability(time);
             Destroy(gameObject);
         }

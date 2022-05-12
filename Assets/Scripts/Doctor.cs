@@ -32,7 +32,6 @@ public class Doctor : Monster
     public LayerMask groundLayers;
     public Rigidbody2D rb;
 
-
     private SpriteRenderer sprite;
 
     protected void Awake()
@@ -40,6 +39,7 @@ public class Doctor : Monster
         shell = Resources.Load<Shell>("Shell");
         InvokeRepeating("DamageByField", rateOfField, rateOfField);
         sprite = GetComponentInChildren<SpriteRenderer>();
+        var clips = GetComponents<AudioSource>();
     }
 
     protected void Start()

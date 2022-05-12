@@ -10,8 +10,11 @@ public class Cannon : Monster
     private Shell shell;
     public Rigidbody2D rb;
 
+    private AudioSource ShootClip;
+
     protected void Awake()
     {
+        ShootClip = GetComponent<AudioSource>();
         shell = Resources.Load<Shell>("Shell");
     }
 
@@ -22,6 +25,7 @@ public class Cannon : Monster
 
     private void Shoot()
     {
+        ShootClip.Play();
         Vector3 position = transform.position; position.y += 0.32F; position.x -= 0.3f;
         Shell newShell = Instantiate(shell, position, shell.transform.rotation);
 

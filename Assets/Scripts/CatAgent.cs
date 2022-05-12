@@ -19,9 +19,10 @@ public class CatAgent : Monster
     public Rigidbody2D rb;
 
     private SpriteRenderer sprite;
-
+    private AudioSource ShootClip;
     protected void Awake()
     {
+        ShootClip = GetComponent<AudioSource>();
         agentBullet = Resources.Load<AgentBullet>("AgentBullet");
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
@@ -38,6 +39,7 @@ public class CatAgent : Monster
 
     private void Shoot()
     {
+        ShootClip.Play();
         Vector3 position = transform.position; position.y += 0.5F;
         AgentBullet newAgentBullet = Instantiate(agentBullet, position, agentBullet.transform.rotation);
         newAgentBullet.Parent = gameObject;

@@ -51,13 +51,22 @@ public class Character : Unit
     private Animator animator;
     private SpriteRenderer sprite;
 
+    private AudioSource JumpClip;
+    private AudioSource ShootClip;
+    private AudioSource DamageClip;
+
     private void Awake()
     {
         livesBar = FindObjectOfType<LivesBar>();
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        GetComponent<AudioSource>().Play();
+        var clips = GetComponents<AudioSource>();
+        clips[0].Play();
+
+        JumpClip = clips[1];
+        ShootClip = clips[2];
+        DamageClip = clips[3];
 
         spear = Resources.Load<Spear>("Spear");
     }
@@ -101,11 +110,13 @@ public class Character : Unit
 
     private void Jump()
     {
+        JumpClip.Play();
         rigidbody.velocity = Vector2.up * jumpForce;
     }
 
     private void Shoot()
     {
+        ShootClip.Play();
         Vector3 position = transform.position; position.y += 0.4F;
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
         newSpear.Parent = gameObject;
@@ -115,6 +126,7 @@ public class Character : Unit
 
     public override void ReceiveDamage()
     {
+        DamageClip.Play();
         if (!isInvulnerable)
         {
             Lives--;

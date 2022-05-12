@@ -20,8 +20,11 @@ public class ShootableMonster : Monster
 
     private SpriteRenderer sprite;
 
+    private AudioSource ShootClip;
+
     protected void Awake()
     {
+        ShootClip = GetComponent<AudioSource>();
         spear = Resources.Load<Spear>("Spear");
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
@@ -38,6 +41,7 @@ public class ShootableMonster : Monster
 
     private void Shoot()
     {
+        ShootClip.Play();
         Vector3 position = transform.position; position.y += 0.5F;
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
         newSpear.Parent = gameObject;

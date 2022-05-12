@@ -29,11 +29,13 @@ public class CatBoss : Monster
     public LayerMask groundLayers;
     public Rigidbody2D rb;
 
+    private AudioSource ShootClip;
 
     private SpriteRenderer sprite;
 
     protected void Awake()
     {
+        ShootClip = GetComponent<AudioSource>();
         bullets = Resources.Load<Bullets>("Bullets");
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
@@ -67,6 +69,7 @@ public class CatBoss : Monster
 
     private void Shoot()
     {
+        ShootClip.Play();
         Vector3 position = transform.position; position.y += 0.4F;
         Bullets newBullets = Instantiate(bullets, position, bullets.transform.rotation);
 
