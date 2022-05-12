@@ -171,14 +171,26 @@ public class Character : Unit
 
     public void setInvulnerability(int timeInSec)
     {
-        StartCoroutine(timeMethod(timeInSec));
+        StartCoroutine(timeMethodForInvulnerability(timeInSec));
     }
 
-    IEnumerator timeMethod(int timeInSec)
+    IEnumerator timeMethodForInvulnerability(int timeInSec)
     {
         isInvulnerable = true;
         yield return new WaitForSeconds(timeInSec);
         isInvulnerable = false;
+    }
+
+    public void setAcceleration(int timeInSec)
+    {
+        StartCoroutine(timeMethodForAcceleration(timeInSec));
+    }
+
+    IEnumerator timeMethodForAcceleration(int timeInSec)
+    {
+        speed *= 1.5f;
+        yield return new WaitForSeconds(timeInSec);
+        speed /= 1.5f;
     }
 }
 
