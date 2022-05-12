@@ -192,6 +192,18 @@ public class Character : Unit
         yield return new WaitForSeconds(timeInSec);
         speed /= 1.5f;
     }
+
+    public void setSuperJump(int timeInSec)
+    {
+        StartCoroutine(timeMethodForSuperJump(timeInSec));
+    }
+
+    IEnumerator timeMethodForSuperJump(int timeInSec)
+    {
+        jumpForce *= 1.5f;
+        yield return new WaitForSeconds(timeInSec);
+        jumpForce /= 1.5f;
+    }
 }
 
 
