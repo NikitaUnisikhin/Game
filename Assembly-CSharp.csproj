@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\Transition1To2.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\SpaceScripts\PowerUp.cs" />
+    <Compile Include="Assets\Scripts\Invulnerable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />

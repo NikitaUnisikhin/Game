@@ -32,6 +32,8 @@ public class Character : Unit
     public LayerMask whatIsGround;
     private float timer = 1f;
 
+    private bool isInvulnerable = false;
+
 
 
     private CharState State
@@ -113,14 +115,17 @@ public class Character : Unit
 
     public override void ReceiveDamage()
     {
-        Lives--;
-
-        rigidbody.velocity = Vector3.zero;
-        rigidbody.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
-
-        if (lives == 0)
+        if (!isInvulnerable)
         {
-            SceneManager.LoadScene("Menu");
+            Lives--;
+
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
+
+            if (lives == 0)
+            {
+                SceneManager.LoadScene("Menu");
+            }
         }
     }
 
@@ -162,6 +167,18 @@ public class Character : Unit
         {
             ReceiveDamage();
         }
+    }
+
+    public void setInvulnerability(int timeInSec)
+    {
+        StartCoroutine(timeMethod(timeInSec));
+    }
+
+    IEnumerator timeMethod(int timeInSec)
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(timeInSec);
+        isInvulnerable = false;
     }
 }
 
