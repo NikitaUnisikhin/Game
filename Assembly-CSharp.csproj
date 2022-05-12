@@ -89,10 +89,12 @@
     <Compile Include="Assets\Maze2D\PlayerControls3D.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
+    <Compile Include="Assets\Scripts\Acceleration.cs" />
     <Compile Include="Assets\Maze3dScripts\GameController.cs" />
     <Compile Include="Assets\Scripts\LBForMammoth.cs" />
     <Compile Include="Assets\Scripts\Transition1ToMaze.cs" />
     <Compile Include="Assets\SpaceScripts\Main.cs" />
+    <Compile Include="Assets\Scripts\SuperJump.cs" />
     <Compile Include="Assets\Scripts\LivesBar.cs" />
     <Compile Include="Assets\Scripts\Doctor.cs" />
     <Compile Include="Assets\SpaceScripts\Weapon.cs" />
@@ -118,8 +120,6 @@
     <Compile Include="Assets\Scripts\Transition1To2.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\SpaceScripts\PowerUp.cs" />
-    <Compile Include="Assets\Scripts\Acceleration.cs" />
-    <Compile Include="Assets\Scripts\SuperJump.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />
