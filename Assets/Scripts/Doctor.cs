@@ -13,7 +13,7 @@ public class Doctor : Monster
     private float rate = 2F;
 
     private float rateOfField = 3F;
-    private float RadiusOfField = 5F;
+    private float RadiusOfField = 0.5F;
 
     public int Lives
     {
