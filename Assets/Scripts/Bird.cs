@@ -7,14 +7,10 @@ public class Bird : Monster
     private float speed = 2.0F;
 
     private Vector3 direction;
-
     private bool isFacingLeft = true;
-    
     public Transform groundCheck;
-    
     public LayerMask groundLayers;
-    
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rb;
 
     protected void Start()
     {
@@ -31,14 +27,11 @@ public class Bird : Monster
 
         if (unit && unit is Character)
         {
-            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) 
-                ReceiveDamage();
-            else 
-                unit.ReceiveDamage();
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
+            else unit.ReceiveDamage();
         }
 
         Spear spear = collider.gameObject.GetComponent<Spear>();
-
         if (spear)
         {
             ReceiveDamage();
@@ -58,7 +51,7 @@ public class Bird : Monster
             direction *= -1.0F;
             transform.localScale = new Vector2(-transform.localScale.x, 1f);
         }
-        rigidbody.velocity = new Vector2(-speed, rigidbody.velocity.y);
+        rb.velocity = new Vector2(-speed, rb.velocity.y);
 
     }
 

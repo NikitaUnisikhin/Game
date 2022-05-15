@@ -1,15 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Acceleration : MonoBehaviour
 {
-    [SerializeField]
-    public int Time = 5;
+    public int time = 5;
 
-    private AudioSource accelerationClip;
+    private AudioSource BuffClip;
 
     protected void Awake()
     {
-        accelerationClip = GetComponent<AudioSource>();
+        BuffClip = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -18,8 +19,8 @@ public class Acceleration : MonoBehaviour
 
         if (character)
         {
-            accelerationClip.Play();
-            character.setAcceleration(Time);
+            BuffClip.Play();
+            character.setAcceleration(time);
             Destroy(gameObject);
         }
     }

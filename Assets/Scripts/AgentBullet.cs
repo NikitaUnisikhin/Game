@@ -1,19 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AgentBullet : MonoBehaviour
 {
-    [SerializeField]
+    private GameObject parent;
+    public GameObject Parent { set { parent = value; } get { return parent; } }
+
     private float speed = 10.0F;
+    private Vector3 direction;
+    public Vector3 Direction { set { direction = value; } }
 
-    public GameObject Parent { get; set; }
-    
-    public Vector3 Direction { get; set; }
+    private SpriteRenderer sprite;
+    new public Rigidbody2D rigidbody;
 
-    public SpriteRenderer Sprite { get; private protected set; }
+    public SpriteRenderer Sprite { set { sprite = value; } get { return sprite; } }
 
     private void Awake()
     {
-        Sprite = GetComponentInChildren<SpriteRenderer>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -23,14 +28,13 @@ public class AgentBullet : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + Direction, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Unit unit = collider.GetComponent<Unit>();
-
-        if ((unit && unit.gameObject != Parent) || collider.tag == "Ground")
+        if ((unit && unit.gameObject != parent) || collider.tag == "Ground")
         {
             Destroy(gameObject);
         }
