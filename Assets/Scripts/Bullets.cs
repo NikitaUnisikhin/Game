@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
+    [SerializeField]
+    private float speed = 10.0F;
+
     private GameObject parent;
     public GameObject Parent { set { parent = value; } get { return parent; } }
 
-    private float speed = 10.0F;
     private Vector3 direction;
     public Vector3 Direction { set { direction = value; } }
 
     private SpriteRenderer sprite;
-    new public Rigidbody2D rigidbody;
 
     public SpriteRenderer Sprite { set { sprite = value; } get { return sprite; } }
 
