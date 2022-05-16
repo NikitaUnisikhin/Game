@@ -3,20 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Mammoth : Monster
+public class Mammoth : Boss
 {
-    [SerializeField]
-    private int lives = 3;
     private const float constantSpeed = 2.0F;
     private const float time = 2.0F;
-    public int Lives
-    {
-        get { return lives; }
-        set
-        {
-            lives = value;
-        }
-    }
 
     [SerializeField]
     private float speed = 2.0F;
@@ -118,7 +108,7 @@ public class Mammoth : Monster
         rb.velocity = Vector3.zero;
         rb.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
 
-        if (lives <= 0) Die();
+        if (Lives <= 0) Die();
     }
 }
 

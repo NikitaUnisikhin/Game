@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
@@ -12,19 +10,17 @@ public class CatAgent : Monster
 
     private AgentBullet agentBullet;
     private Vector3 direction;
-
     private bool isFacingLeft = true;
+
     public Transform groundCheck;
     public LayerMask groundLayers;
     public Rigidbody2D rb;
-
-    private SpriteRenderer sprite;
-    private AudioSource ShootClip;
+    private AudioSource shootClip;
+    
     protected void Awake()
     {
-        ShootClip = GetComponent<AudioSource>();
+        shootClip = GetComponent<AudioSource>();
         agentBullet = Resources.Load<AgentBullet>("AgentBullet");
-        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     protected void Start()
@@ -39,9 +35,11 @@ public class CatAgent : Monster
 
     private void Shoot()
     {
-        ShootClip.Play();
+        shootClip.Play();
+
         Vector3 position = transform.position; position.y += 0.5F;
         AgentBullet newAgentBullet = Instantiate(agentBullet, position, agentBullet.transform.rotation);
+        
         newAgentBullet.Parent = gameObject;
         newAgentBullet.Sprite.flipX = !isFacingLeft;
         newAgentBullet.Direction = -newAgentBullet.transform.right * speed / 2;
@@ -53,11 +51,18 @@ public class CatAgent : Monster
 
         if (unit && unit is Character)
         {
-            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
-            else unit.ReceiveDamage();
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F)
+            {
+                ReceiveDamage();
+            }
+            else
+            {
+                unit.ReceiveDamage();
+            }
         }
 
         Spear spear = collider.gameObject.GetComponent<Spear>();
+
         if (spear && spear.Parent != gameObject)
         {
             ReceiveDamage();
@@ -77,7 +82,7 @@ public class CatAgent : Monster
             direction *= -1.0F;
             transform.localScale = new Vector2(-transform.localScale.x, 1f);
         }
-        rb.velocity = new Vector2(-speed, rb.velocity.y);
 
+        rb.velocity = new Vector2(-speed, rb.velocity.y);
     }
 }

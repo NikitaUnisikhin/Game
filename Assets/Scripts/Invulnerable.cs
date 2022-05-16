@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Invulnerable : MonoBehaviour
 {
+    [SerializeField]
     public int time = 5;
 
-    private AudioSource BuffClip;
+    private AudioSource buffClip;
 
     protected void Awake()
     {
-        BuffClip = GetComponent<AudioSource>();
+        buffClip = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -19,7 +18,7 @@ public class Invulnerable : MonoBehaviour
 
         if (character)
         {
-            BuffClip.Play();
+            buffClip.Play();
             character.setInvulnerability(time);
             Destroy(gameObject);
         }

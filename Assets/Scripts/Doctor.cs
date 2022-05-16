@@ -1,45 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class Doctor : Monster
+public class Doctor : Boss
 {
     [SerializeField]
     private float speed = 2.0F;
     [SerializeField]
-    private int lives = 3;
-    [SerializeField]
     private float rate = 2F;
-
+    [SerializeField]
     private float rateOfField = 3F;
+    [SerializeField]
     private float RadiusOfField = 0.5F;
-
-    public int Lives
-    {
-        get { return lives; }
-        set
-        {
-            lives = value;
-        }
-    }
 
     private Shell shell;
     private Vector3 direction;
-
     private bool isFacingLeft = true;
     public Transform groundCheck;
     public LayerMask groundLayers;
     public Rigidbody2D rb;
 
-    private SpriteRenderer sprite;
-
     protected void Awake()
     {
         shell = Resources.Load<Shell>("Shell");
         InvokeRepeating("DamageByField", rateOfField, rateOfField);
-        sprite = GetComponentInChildren<SpriteRenderer>();
-        var clips = GetComponents<AudioSource>();
     }
 
     protected void Start()
@@ -55,7 +38,9 @@ public class Doctor : Monster
     private void DamageByField()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, RadiusOfField);
+
         Character character = FindObjectOfType<Character>();
+        
         if (colliders.Any(x => x.GetComponent<Character>()))
             character.ReceiveDamage();
     }
@@ -63,11 +48,16 @@ public class Doctor : Monster
     protected override void OnTriggerEnter2D(Collider2D collider)
     {
         Unit unit = collider.GetComponent<Unit>();
-
         if (unit && unit is Character)
         {
-            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
-            else unit.ReceiveDamage();
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F)
+            {
+                ReceiveDamage();
+            }
+            else
+            {
+                unit.ReceiveDamage();
+            }
         }
 
         Spear spear = collider.gameObject.GetComponent<Spear>();
@@ -100,6 +90,7 @@ public class Doctor : Monster
             direction *= -1.0F;
             transform.localScale = new Vector2(-transform.localScale.x, 1f);
         }
+
         rb.velocity = new Vector2(-speed, rb.velocity.y);
     }
 
@@ -110,6 +101,6 @@ public class Doctor : Monster
         rb.velocity = Vector3.zero;
         rb.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
 
-        if (lives <= 0) Die();
+        if (Lives <= 0) Die();
     }
 }

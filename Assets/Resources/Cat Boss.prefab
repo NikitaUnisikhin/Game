@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6345172307407600047}
   - component: {fileID: 8861985185570126715}
   - component: {fileID: 4463676284134366027}
-  - component: {fileID: 483602541014941890}
+  - component: {fileID: 2313363503980502753}
   m_Layer: 5
   m_Name: LivesBar
   m_TagString: Untagged
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 1
   m_VerticalFit: 1
---- !u!114 &483602541014941890
+--- !u!114 &2313363503980502753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,9 +130,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 332511982246229810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6bd0756ba5b7848991063ea3e0068a, type: 3}
+  m_Script: {fileID: 11500000, guid: 50655707e38010944a3c7476f2ff38c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countHearts: 3
 --- !u!1 &2515214674732962696
 GameObject:
   m_ObjectHideFlags: 0

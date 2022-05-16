@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-    private GameObject parent;
-    public GameObject Parent { set { parent = value; } get { return parent; } }
-
+    [SerializeField]
     private float speed = 10.0F;
-    private Vector3 direction;
-    public Vector3 Direction { set { direction = value; } }
 
-    private SpriteRenderer sprite;
-    new public Rigidbody2D rigidbody;
-
-    public SpriteRenderer Sprite { set { sprite = value; } get { return sprite; } }
+    public GameObject Parent { get; set; }
+    public Vector3 Direction { get; set; }
+    public SpriteRenderer Sprite { get; set; }
 
     private void Awake()
     {
-        sprite = GetComponentInChildren<SpriteRenderer>();
+        Sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -28,13 +23,14 @@ public class Bullets : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + Direction, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Unit unit = collider.GetComponent<Unit>();
-        if ((unit && unit.gameObject != parent) || collider.tag == "Ground")
+
+        if ((unit && unit.gameObject != Parent) || collider.tag == "Ground")
         {
             Destroy(gameObject);
         }

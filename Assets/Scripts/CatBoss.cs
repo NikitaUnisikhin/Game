@@ -3,23 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class CatBoss : Monster
+public class CatBoss : Boss
 {
     [SerializeField]
     private float speed = 2.0F;
     [SerializeField]
-    private int lives = 3;
-    [SerializeField]
     private float rate = 2F;
-
-    public int Lives
-    {
-        get { return lives; }
-        set
-        {
-            lives = value;
-        }
-    }
 
     private Bullets bullets;
     private Vector3 direction;
@@ -84,7 +73,7 @@ public class CatBoss : Monster
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayers);
 
-        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>() && !x.GetComponent<Shell>() 
+        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>() && !x.GetComponent<Shell>()
                                                     && !x.GetComponent<Bullets>()) || groundInfo.collider == false)
         {
             isFacingLeft = !isFacingLeft;
@@ -102,6 +91,6 @@ public class CatBoss : Monster
         rb.velocity = Vector3.zero;
         rb.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
 
-        if (lives <= 0) Die();
+        if (Lives <= 0) Die();
     }
 }

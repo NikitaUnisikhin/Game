@@ -8,6 +8,32 @@ public class Character : Unit
     [SerializeField]
     private int lives = 9;
 
+    [SerializeField]
+    private float speed = 3.0F;
+    
+    [SerializeField]
+    private float jumpForce = 10.0F;
+
+    private LivesBar livesBar;
+    public Transform groudCheck;
+    public LayerMask whatIsGround;
+    private Spear spear;
+    private Rigidbody2D rb;
+    private Animator animator;
+    private SpriteRenderer sprite;
+
+    private bool isGrounded = false;
+    public float checkRadius = 0.5f;
+    private float force = 5f;
+    private float timer = 1f;
+    private bool isInvulnerable = false;
+    private int extraJumps;
+    public int extraJumpsValue = 1;
+
+    private AudioSource JumpClip;
+    private AudioSource ShootClip;
+    private AudioSource DamageClip;
+
     public int Lives
     {
         get { return lives; }
@@ -17,24 +43,6 @@ public class Character : Unit
             livesBar.Refresh();
         }
     }
-    private LivesBar livesBar;
-
-    [SerializeField]
-    private float speed = 3.0F;
-    [SerializeField]
-    private float jumpForce = 10.0F;
-
-    private float force = 5f;
-
-    private bool isGrounded = false;
-    public Transform groudCheck;
-    public float checkRadius = 0.5f;
-    public LayerMask whatIsGround;
-    private float timer = 1f;
-
-    private bool isInvulnerable = false;
-
-
 
     private CharState State
     {
@@ -42,25 +50,13 @@ public class Character : Unit
         set { animator.SetInteger("State", (int)value); }
     }
 
-    private int extraJumps;
-    public int extraJumpsValue = 1;
-
-    private Spear spear;
-
-    new private Rigidbody2D rigidbody;
-    private Animator animator;
-    private SpriteRenderer sprite;
-
-    private AudioSource JumpClip;
-    private AudioSource ShootClip;
-    private AudioSource DamageClip;
-
     private void Awake()
     {
         livesBar = FindObjectOfType<LivesBar>();
-        rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+
         var clips = GetComponents<AudioSource>();
         clips[0].Play();
 
@@ -85,11 +81,18 @@ public class Character : Unit
         }
 
         if (Input.GetButtonDown("Fire1") && timer <= 0)
+        {
             Shoot();
-        else 
+        }
+        else
+        {
             timer -= Time.deltaTime;
+        }
 
-        if (Input.GetButton("Horizontal")) Run();
+        if (Input.GetButton("Horizontal"))
+        {
+            Run();
+        }
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
             Jump();
@@ -105,18 +108,22 @@ public class Character : Unit
 
         sprite.flipX = direction.x < 0.0F;
 
-        if (isGrounded) State = CharState.Run;
+        if (isGrounded)
+        {
+            State = CharState.Run;
+        }
     }
 
     private void Jump()
     {
         JumpClip.Play();
-        rigidbody.velocity = Vector2.up * jumpForce;
+        rb.velocity = Vector2.up * jumpForce;
     }
 
     private void Shoot()
     {
         ShootClip.Play();
+
         Vector3 position = transform.position; position.y += 0.4F;
         Spear newSpear = Instantiate(spear, position, spear.transform.rotation);
         newSpear.Parent = gameObject;
@@ -127,12 +134,13 @@ public class Character : Unit
     public override void ReceiveDamage()
     {
         DamageClip.Play();
+
         if (!isInvulnerable)
         {
             Lives--;
 
-            rigidbody.velocity = Vector3.zero;
-            rigidbody.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
+            rb.velocity = Vector3.zero;
+            rb.AddForce(transform.up * 8.0F, ForceMode2D.Impulse);
 
             if (lives == 0)
             {
@@ -145,7 +153,10 @@ public class Character : Unit
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.3F);
 
-        isGrounded = colliders.Where(collider => collider.tag != "Invisible").ToArray().Length > 1;
+        isGrounded = colliders
+            .Where(collider => collider.tag != "Invisible")
+            .ToArray()
+            .Length > 1;
 
         if (!isGrounded)
         {
@@ -155,6 +166,7 @@ public class Character : Unit
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        // тут разные снаряды, нужно от одного класса наследовать и метод в 4 раза сократится
 
         Spear spear = collider.gameObject.GetComponent<Spear>();
         if (spear && spear.Parent != gameObject)

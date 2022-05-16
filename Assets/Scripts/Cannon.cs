@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Cannon : Monster
@@ -8,13 +6,14 @@ public class Cannon : Monster
     private float rate = 1F;
 
     private Shell shell;
+    
     public Rigidbody2D rb;
-
-    private AudioSource ShootClip;
+    
+    private AudioSource shootClip;
 
     protected void Awake()
     {
-        ShootClip = GetComponent<AudioSource>();
+        shootClip = GetComponent<AudioSource>();
         shell = Resources.Load<Shell>("Shell");
     }
 
@@ -25,7 +24,7 @@ public class Cannon : Monster
 
     private void Shoot()
     {
-        ShootClip.Play();
+        shootClip.Play();
         Vector3 position = transform.position; position.y += 0.32F; position.x -= 0.3f;
         Shell newShell = Instantiate(shell, position, shell.transform.rotation);
 
@@ -43,6 +42,7 @@ public class Cannon : Monster
         }
 
         Spear spear = collider.gameObject.GetComponent<Spear>();
+
         if (spear && spear.Parent != gameObject)
         {
             ReceiveDamage();
