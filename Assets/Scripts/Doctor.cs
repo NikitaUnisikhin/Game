@@ -12,7 +12,7 @@ public class Doctor : Boss
     [SerializeField]
     private float RadiusOfField = 0.5F;
 
-    private Shell shell;
+    private Bullet shell;
     private Vector3 direction;
     private bool isFacingLeft = true;
     public Transform groundCheck;
@@ -21,7 +21,7 @@ public class Doctor : Boss
 
     protected void Awake()
     {
-        shell = Resources.Load<Shell>("Shell");
+        shell = Resources.Load<Bullet>("Shell");
         InvokeRepeating("DamageByField", rateOfField, rateOfField);
     }
 
@@ -70,7 +70,7 @@ public class Doctor : Boss
     private void Shoot()
     {
         Vector3 position = transform.position; position.y += 0.4F;
-        Shell newShell = Instantiate(shell, position, shell.transform.rotation);
+        Bullet newShell = Instantiate(shell, position, shell.transform.rotation);
 
         newShell.Parent = gameObject;
         newShell.Sprite.flipX = !isFacingLeft;
@@ -83,7 +83,7 @@ public class Doctor : Boss
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayers);
 
-        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>() && !x.GetComponent<Shell>()) || groundInfo.collider == false)
+        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>() && !x.GetComponent<Bullet>()) || groundInfo.collider == false)
         {
             isFacingLeft = !isFacingLeft;
             speed = -speed;

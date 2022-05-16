@@ -174,19 +174,13 @@ public class Character : Unit
             ReceiveDamage();
         }
 
-        Shell shell = collider.gameObject.GetComponent<Shell>();
+        Bullet shell = collider.gameObject.GetComponent<Bullet>();
         if (shell && shell.Parent != gameObject)
         {
             ReceiveDamage();
         }
 
-        AgentBullet agentBullet = collider.gameObject.GetComponent<AgentBullet>();
-        if (agentBullet && agentBullet.Parent != gameObject)
-        {
-            ReceiveDamage();
-        }
-
-        Bullets bullets = collider.gameObject.GetComponent<Bullets>();
+        Bullet bullets = collider.gameObject.GetComponent<Bullet>();
         if (bullets && bullets.Parent != gameObject)
         {
             ReceiveDamage();

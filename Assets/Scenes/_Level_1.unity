@@ -5887,9 +5887,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061807452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa50d8273fa44094aa6dbd7b91037c63, type: 3}
+  m_Script: {fileID: 11500000, guid: c7d173f885784384db9633dcba53b54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScene: Maze2D
 --- !u!1001 &1070058887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11763,7 +11764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 306626692500027046, guid: ac63f1a1d05012a44bd179952c3095b8, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 306626692500027046, guid: ac63f1a1d05012a44bd179952c3095b8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -12513,7 +12514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8387192301511222132, guid: 3aab31cc592aaad409e9bd99cbe748fc, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8387192301511222132, guid: 3aab31cc592aaad409e9bd99cbe748fc, type: 3}
       propertyPath: m_AnchorMax.x

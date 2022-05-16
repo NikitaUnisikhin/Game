@@ -8,7 +8,7 @@ public class CatAgent : Monster
     [SerializeField]
     private float speed = 2.0F;
 
-    private AgentBullet agentBullet;
+    private Bullet agentBullet;
     private Vector3 direction;
     private bool isFacingLeft = true;
 
@@ -20,7 +20,7 @@ public class CatAgent : Monster
     protected void Awake()
     {
         shootClip = GetComponent<AudioSource>();
-        agentBullet = Resources.Load<AgentBullet>("AgentBullet");
+        agentBullet = Resources.Load<Bullet>("AgentBullet");
     }
 
     protected void Start()
@@ -38,7 +38,7 @@ public class CatAgent : Monster
         shootClip.Play();
 
         Vector3 position = transform.position; position.y += 0.5F;
-        AgentBullet newAgentBullet = Instantiate(agentBullet, position, agentBullet.transform.rotation);
+        Bullet newAgentBullet = Instantiate(agentBullet, position, agentBullet.transform.rotation);
         
         newAgentBullet.Parent = gameObject;
         newAgentBullet.Sprite.flipX = !isFacingLeft;
@@ -75,7 +75,7 @@ public class CatAgent : Monster
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayers);
 
-        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<AgentBullet>()) || groundInfo.collider == false)
+        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Bullet>()) || groundInfo.collider == false)
         {
             isFacingLeft = !isFacingLeft;
             speed = -speed;

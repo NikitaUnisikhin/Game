@@ -5,7 +5,7 @@ public class Cannon : Monster
     [SerializeField]
     private float rate = 1F;
 
-    private Shell shell;
+    private Bullet shell;
     
     public Rigidbody2D rb;
     
@@ -14,7 +14,7 @@ public class Cannon : Monster
     protected void Awake()
     {
         shootClip = GetComponent<AudioSource>();
-        shell = Resources.Load<Shell>("Shell");
+        shell = Resources.Load<Bullet>("Shell");
     }
 
     protected void Start()
@@ -26,10 +26,10 @@ public class Cannon : Monster
     {
         shootClip.Play();
         Vector3 position = transform.position; position.y += 0.32F; position.x -= 0.3f;
-        Shell newShell = Instantiate(shell, position, shell.transform.rotation);
+        Bullet newBullet = Instantiate(shell, position, shell.transform.rotation);
 
-        newShell.Parent = gameObject;
-        newShell.Direction = -newShell.transform.right;
+        newBullet.Parent = gameObject;
+        newBullet.Direction = -newBullet.transform.right;
     }
     protected override void OnTriggerEnter2D(Collider2D collider)
     {

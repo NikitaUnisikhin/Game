@@ -10,7 +10,7 @@ public class CatBoss : Boss
     [SerializeField]
     private float rate = 2F;
 
-    private Bullets bullets;
+    private Bullet bullets;
     private Vector3 direction;
 
     private bool isFacingLeft = true;
@@ -25,7 +25,7 @@ public class CatBoss : Boss
     protected void Awake()
     {
         ShootClip = GetComponent<AudioSource>();
-        bullets = Resources.Load<Bullets>("Bullets");
+        bullets = Resources.Load<Bullet>("Bullets");
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -42,7 +42,6 @@ public class CatBoss : Boss
     protected override void OnTriggerEnter2D(Collider2D collider)
     {
         Unit unit = collider.GetComponent<Unit>();
-
         if (unit && unit is Character)
         {
             if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
@@ -60,7 +59,7 @@ public class CatBoss : Boss
     {
         ShootClip.Play();
         Vector3 position = transform.position; position.y += 0.4F;
-        Bullets newBullets = Instantiate(bullets, position, bullets.transform.rotation);
+        Bullet newBullets = Instantiate(bullets, position, bullets.transform.rotation);
 
         newBullets.Parent = gameObject;
         newBullets.Sprite.flipX = !isFacingLeft;
@@ -73,8 +72,8 @@ public class CatBoss : Boss
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayers);
 
-        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>() && !x.GetComponent<Shell>()
-                                                    && !x.GetComponent<Bullets>()) || groundInfo.collider == false)
+        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Character>() && !x.GetComponent<Spear>() && !x.GetComponent<Bullet>()
+                                                    && !x.GetComponent<Bullet>()) || groundInfo.collider == false)
         {
             isFacingLeft = !isFacingLeft;
             speed = -speed;

@@ -1660,9 +1660,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 257380609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e4548c21fc812a4fa771566cade2081, type: 3}
+  m_Script: {fileID: 11500000, guid: c7d173f885784384db9633dcba53b54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScene: Menu
 --- !u!1001 &264776544
 PrefabInstance:
   m_ObjectHideFlags: 0
