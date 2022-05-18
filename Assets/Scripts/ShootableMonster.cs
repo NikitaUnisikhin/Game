@@ -10,23 +10,18 @@ public class ShootableMonster : Monster
 
     private Spear spear;
     private Vector3 direction;
-
+    private float force = 5f;
     private bool isFacingLeft = true;
+    
     public Transform groundCheck;
     public LayerMask groundLayers;
     public Rigidbody2D rb;
-    private float force = 5f;
-
-
-    private SpriteRenderer sprite;
-
     private AudioSource ShootClip;
 
     protected void Awake()
     {
         ShootClip = GetComponent<AudioSource>();
         spear = Resources.Load<Spear>("Spear");
-        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     protected void Start()
@@ -51,7 +46,6 @@ public class ShootableMonster : Monster
     protected override void OnTriggerEnter2D(Collider2D collider)
     {
         Unit unit = collider.GetComponent<Unit>();
-
         if (unit && unit is Character)
         {
             if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
@@ -78,7 +72,7 @@ public class ShootableMonster : Monster
             direction *= -1.0F;
             transform.localScale = new Vector2(-transform.localScale.x, 1f);
         }
-        rb.velocity = new Vector2(-speed, rb.velocity.y);
 
+        rb.velocity = new Vector2(-speed, rb.velocity.y);
     }
 }

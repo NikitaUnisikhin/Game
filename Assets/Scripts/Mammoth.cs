@@ -5,20 +5,17 @@ using UnityEngine;
 
 public class Mammoth : Boss
 {
-    private const float constantSpeed = 2.0F;
-    private const float time = 2.0F;
-
     [SerializeField]
     private float speed = 2.0F;
 
-    private Vector3 direction;
+    private const float constantSpeed = 2.0F;
+    private const float time = 2.0F;
 
+    private Vector3 direction;
     private bool isFacingLeft = true;
     public Transform groundCheck;
     public LayerMask groundLayers;
     public Rigidbody2D rb;
-
-    private SpriteRenderer sprite;
     private Animator animator;
 
     private MammothState State
@@ -30,7 +27,6 @@ public class Mammoth : Boss
     protected void Awake()
     {
         animator = GetComponent<Animator>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     protected void Start()
@@ -98,6 +94,7 @@ public class Mammoth : Boss
             direction *= -1.0F;
             transform.localScale = new Vector2(-transform.localScale.x, 1f);
         }
+
         rb.velocity = new Vector2(-speed, rb.velocity.y);
     }
 

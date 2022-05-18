@@ -40,9 +40,11 @@ public class Doctor : Boss
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, RadiusOfField);
 
         Character character = FindObjectOfType<Character>();
-        
+
         if (colliders.Any(x => x.GetComponent<Character>()))
+        {
             character.ReceiveDamage();
+        }
     }
 
     protected override void OnTriggerEnter2D(Collider2D collider)

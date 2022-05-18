@@ -7,7 +7,6 @@ public class LivesBar : MonoBehaviour
 
     private Character character;
 
-
     private void Awake()
     {
         character = FindObjectOfType<Character>();

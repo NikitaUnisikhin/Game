@@ -166,22 +166,9 @@ public class Character : Unit
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        // тут разные снаряды, нужно от одного класса наследовать и метод в 4 раза сократится
+        Bullet projectile = collider.gameObject.GetComponent<Bullet>();
 
-        Spear spear = collider.gameObject.GetComponent<Spear>();
-        if (spear && spear.Parent != gameObject)
-        {
-            ReceiveDamage();
-        }
-
-        Bullet shell = collider.gameObject.GetComponent<Bullet>();
-        if (shell && shell.Parent != gameObject)
-        {
-            ReceiveDamage();
-        }
-
-        Bullet bullets = collider.gameObject.GetComponent<Bullet>();
-        if (bullets && bullets.Parent != gameObject)
+        if (projectile && projectile.Parent != gameObject)
         {
             ReceiveDamage();
         }

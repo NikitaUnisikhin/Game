@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Linq;
 
 public class MoveableMonster : Monster
@@ -9,14 +8,6 @@ public class MoveableMonster : Monster
 
     private Vector3 direction;
     
-
-    private SpriteRenderer sprite;
-
-    protected void Awake()
-    {
-        sprite = GetComponentInChildren<SpriteRenderer>();
-    }
-
     protected void Start()
     {
         direction = transform.right;
