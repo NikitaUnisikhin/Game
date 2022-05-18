@@ -33,6 +33,7 @@ public class Character : Unit
     private AudioSource JumpClip;
     private AudioSource ShootClip;
     private AudioSource DamageClip;
+    private AudioSource GetBuffClip;
 
     public int Lives
     {
@@ -63,6 +64,7 @@ public class Character : Unit
         JumpClip = clips[1];
         ShootClip = clips[2];
         DamageClip = clips[3];
+        GetBuffClip = clips[4];
 
         spear = Resources.Load<Spear>("Spear");
     }
@@ -188,11 +190,13 @@ public class Character : Unit
 
     public void setAcceleration(int timeInSec)
     {
+        GetBuffClip.Play();
         StartCoroutine(timeMethodForAcceleration(timeInSec));
     }
 
     IEnumerator timeMethodForAcceleration(int timeInSec)
     {
+        GetBuffClip.Play();
         speed *= 1.5f;
         yield return new WaitForSeconds(timeInSec);
         speed /= 1.5f;
@@ -200,6 +204,7 @@ public class Character : Unit
 
     public void setSuperJump(int timeInSec)
     {
+        GetBuffClip.Play();
         StartCoroutine(timeMethodForSuperJump(timeInSec));
     }
 
