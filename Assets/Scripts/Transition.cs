@@ -10,7 +10,7 @@ public class Transition : MonoBehaviour
     {
         Unit unit = collider.GetComponent<Unit>();
 
-        if (unit && unit is Character)
+        if (unit && (unit is Character || unit is PlayerControls))
         {
             SceneManager.LoadScene(targetScene);
         }

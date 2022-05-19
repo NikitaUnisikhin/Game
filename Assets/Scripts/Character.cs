@@ -168,6 +168,13 @@ public class Character : Unit
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        Bonus bonus = collider.gameObject.GetComponent<Bonus>();
+
+        if (bonus)
+        {
+            GetBuffClip.Play();
+        }
+
         Bullet projectile = collider.gameObject.GetComponent<Bullet>();
 
         if (projectile && projectile.Parent != gameObject)
@@ -190,13 +197,11 @@ public class Character : Unit
 
     public void setAcceleration(int timeInSec)
     {
-        GetBuffClip.Play();
         StartCoroutine(timeMethodForAcceleration(timeInSec));
     }
 
     IEnumerator timeMethodForAcceleration(int timeInSec)
     {
-        GetBuffClip.Play();
         speed *= 1.5f;
         yield return new WaitForSeconds(timeInSec);
         speed /= 1.5f;
@@ -204,7 +209,6 @@ public class Character : Unit
 
     public void setSuperJump(int timeInSec)
     {
-        GetBuffClip.Play();
         StartCoroutine(timeMethodForSuperJump(timeInSec));
     }
 

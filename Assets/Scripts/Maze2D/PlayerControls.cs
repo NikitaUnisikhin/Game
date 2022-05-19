@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerControls : MonoBehaviour
+public class PlayerControls : Unit
 {
     public float Speed = 2;
     private Animator animator;

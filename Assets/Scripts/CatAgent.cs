@@ -8,7 +8,7 @@ public class CatAgent : Monster
     [SerializeField]
     private float speed = 2.0F;
 
-    private Bullet agentBullet;
+    private Bullet bullet;
     private Vector3 direction;
     private bool isFacingLeft = true;
 
@@ -20,7 +20,7 @@ public class CatAgent : Monster
     protected void Awake()
     {
         shootClip = GetComponent<AudioSource>();
-        agentBullet = Resources.Load<Bullet>("AgentBullet");
+        bullet = Resources.Load<Bullet>("AgentBullet");
     }
 
     protected void Start()
@@ -38,7 +38,7 @@ public class CatAgent : Monster
         shootClip.Play();
 
         Vector3 position = transform.position; position.y += 0.5F;
-        Bullet newAgentBullet = Instantiate(agentBullet, position, agentBullet.transform.rotation);
+        Bullet newAgentBullet = Instantiate(bullet, position, bullet.transform.rotation);
         
         newAgentBullet.Parent = gameObject;
         newAgentBullet.Sprite.flipX = !isFacingLeft;

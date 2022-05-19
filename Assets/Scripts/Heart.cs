@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Heart : MonoBehaviour
+public class Heart : Bonus
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
