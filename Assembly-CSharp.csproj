@@ -71,13 +71,12 @@
     <Compile Include="Assets\Scripts\Maze3dScripts\MazeDataGenerator.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\DeathCounter.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Enemy_3.cs" />
     <Compile Include="Assets\Scripts\Maze3dScripts\MazeMeshGenerator.cs" />
     <Compile Include="Assets\Scripts\Maze2D\Maze.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Cannon.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
-    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\CatBoss.cs" />
     <Compile Include="Assets\Scripts\ShootableMonster.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Utils.cs" />
@@ -95,11 +94,13 @@
     <Compile Include="Assets\Scripts\SpaceScripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\Maze3dScripts\FpsMovement.cs" />
     <Compile Include="Assets\Scripts\Maze2D\Finish.cs" />
+    <Compile Include="Assets\Scripts\GameProjectile.cs" />
     <Compile Include="Assets\Scripts\CatAgent.cs" />
     <Compile Include="Assets\Sprites\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
     <Compile Include="Assets\Scripts\Maze2D\MazeSpawner.cs" />
     <Compile Include="Assets\Scripts\Maze3dScripts\MazeConstructor.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
+    <Compile Include="Assets\Scripts\Transition.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Shield.cs" />
     <Compile Include="Assets\Scripts\Mammoth.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
@@ -112,9 +113,6 @@
     <Compile Include="Assets\Scripts\SpaceScripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\PowerUp.cs" />
-    <Compile Include="Assets\Scripts\GameProjectile.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Transition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Graphics\_Materials\UnlitAlpha.shader" />

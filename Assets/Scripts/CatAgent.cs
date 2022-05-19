@@ -51,7 +51,8 @@ public class CatAgent : Monster
 
         if (unit && unit is Character)
         {
-            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F)
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.6F
+                && Mathf.Abs(unit.transform.position.y - transform.position.y) > 0.3f)
             {
                 ReceiveDamage();
             }

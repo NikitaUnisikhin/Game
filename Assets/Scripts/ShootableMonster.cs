@@ -48,7 +48,9 @@ public class ShootableMonster : Monster
         Unit unit = collider.GetComponent<Unit>();
         if (unit && unit is Character)
         {
-            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.6F
+                && Mathf.Abs(unit.transform.position.y - transform.position.y) > 0.3f)
+                ReceiveDamage();
             else unit.ReceiveDamage();
         }
 

@@ -172,6 +172,13 @@ public class Character : Unit
         {
             ReceiveDamage();
         }
+
+        Spear spear = collider.gameObject.GetComponent<Spear>();
+
+        if (spear && spear.Parent != gameObject)
+        {
+            ReceiveDamage();
+        }
     }
 
     public void setInvulnerability(int timeInSec)
