@@ -71,12 +71,14 @@
     <Compile Include="Assets\Scripts\Maze3dScripts\MazeDataGenerator.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\DeathCounter.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Enemy_3.cs" />
     <Compile Include="Assets\Scripts\Maze3dScripts\MazeMeshGenerator.cs" />
     <Compile Include="Assets\Scripts\Maze2D\Maze.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Cannon.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\CatBoss.cs" />
     <Compile Include="Assets\Scripts\ShootableMonster.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\Utils.cs" />
