@@ -115,6 +115,7 @@
     <Compile Include="Assets\Scripts\SpaceScripts\BoundsCheck.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\Scripts\SpaceScripts\PowerUp.cs" />
+    <Compile Include="Assets\Scripts\TheEndOFGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Graphics\_Materials\UnlitAlpha.shader" />
