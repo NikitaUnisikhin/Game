@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Maze2D\HintRenderer.cs" />
     <Compile Include="Assets\Sprites\Free 2D Cartoon Parallax Background\Demo\Script\ParallaxBackground_0.cs" />
+    <Compile Include="Assets\Scripts\Bonus.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\Robber.cs" />
     <Compile Include="Assets\Scripts\Maze2D\MazeGenerator.cs" />
@@ -95,7 +96,7 @@
     <Compile Include="Assets\Scripts\Maze2D\Cell.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
-    <Compile Include="Assets\Scripts\Bonus.cs" />
+    <Compile Include="Assets\Scripts\Maze2D\Ghost.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

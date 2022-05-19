@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HintRenderer : MonoBehaviour
 {
     public MazeSpawner MazeSpawner;
     public GameObject Finish;
+    public GameObject Ghost;
 
     private LineRenderer componentLineRenderer;
 
@@ -20,47 +20,12 @@ public class HintRenderer : MonoBehaviour
         int y = maze.finishPosition.y;
         Instantiate(Finish,new Vector3(x, y, 0), Quaternion.identity);
     }
-    public void DrawPath()
+
+    public void AddGhosts()
     {
-        Maze maze = MazeSpawner.maze;
-        int x = maze.finishPosition.x;
-        int y = maze.finishPosition.y;
-        List<Vector3> positions = new List<Vector3>();
-
-        while ((x != 0 || y != 0) && positions.Count < 10000)
+        foreach (var cell in MazeSpawner.maze.ghostsG)
         {
-            positions.Add(new Vector3(x * MazeSpawner.CellSize.x, y * MazeSpawner.CellSize.y, y * MazeSpawner.CellSize.z));
-
-            MazeGeneratorCell currentCell = maze.cells[x, y];
-
-            if (x > 0 &&
-                !currentCell.WallLeft &&
-                maze.cells[x - 1, y].DistanceFromStart < currentCell.DistanceFromStart)
-            {
-                x--;
-            }
-            else if (y > 0 &&
-                !currentCell.WallBottom &&
-                maze.cells[x, y - 1].DistanceFromStart < currentCell.DistanceFromStart)
-            {
-                y--;
-            }
-            else if (x < maze.cells.GetLength(0) - 1 &&
-                !maze.cells[x + 1, y].WallLeft &&
-                maze.cells[x + 1, y].DistanceFromStart < currentCell.DistanceFromStart)
-            {
-                x++;
-            }
-            else if (y < maze.cells.GetLength(1) - 1 &&
-                !maze.cells[x, y + 1].WallBottom &&
-                maze.cells[x, y + 1].DistanceFromStart < currentCell.DistanceFromStart)
-            {
-                y++;
-            }
+            Instantiate(Ghost, new Vector3(cell.X - 0.5f, cell.Y - 2.5f, 0), Quaternion.identity);
         }
-
-        positions.Add(Vector3.zero);
-        componentLineRenderer.positionCount = positions.Count;
-        componentLineRenderer.SetPositions(positions.ToArray());
     }
 }

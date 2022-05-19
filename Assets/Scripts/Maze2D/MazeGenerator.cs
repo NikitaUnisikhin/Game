@@ -35,6 +35,67 @@ public class MazeGenerator
         maze.cells = cells;
         maze.finishPosition = PlaceMazeExit(cells);
 
+        // ищем места для призраков 
+        // признак подходящей клетки:
+        // 1) от стенки до стенки >4 клеток
+        // 2) выход не из крайней клетки
+
+        var ghostsG = new List<MazePoint>();
+
+        for (int i = 0; i < Height; i++)
+        {
+            for (int j = 0; j < Width; j++)
+            {
+                var counter = 0;
+
+                for (int k = j; k < Width; k++)
+                {
+                    if (!maze.cells[i, k].WallLeft)
+                        counter++;
+                    else if (counter < 3)
+                        break;
+                    else
+                    {
+                        ghostsG.Add(new MazePoint(i, k));
+                        j = k;
+                        break;
+                    }
+                }
+            }
+        }
+
+        /*
+        var ghostsV = new List<MazePoint>();
+
+        for (int i = 0; i < Width; i++)
+        {
+            for (int j = 0; j < Height; j++)
+            {
+                var counter = 0;
+
+                for (int k = j; k < Height; k++)
+                {
+                    if (!maze.cells[k, i].WallBottom)
+                        counter++;
+                    else if (counter < 3)
+                        break;
+                    else
+                    {
+                        ghostsV.Add(new MazePoint(i, k));
+                        j = k;
+                        break;
+                    }
+                }
+            }
+        }
+        */
+
+        // 4 7
+        // 7 5
+
+        maze.ghostsG = ghostsG;
+        // maze.ghostsV = ghostsV;
+
         return maze;
     }
 
