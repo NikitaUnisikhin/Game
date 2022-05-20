@@ -16,7 +16,7 @@ public class CatAgent : Monster
     public LayerMask groundLayers;
     public Rigidbody2D rb;
     private AudioSource shootClip;
-    
+
     protected void Awake()
     {
         shootClip = GetComponent<AudioSource>();
@@ -39,7 +39,7 @@ public class CatAgent : Monster
 
         Vector3 position = transform.position; position.y += 0.5F;
         Bullet newAgentBullet = Instantiate(bullet, position, bullet.transform.rotation);
-        
+
         newAgentBullet.Parent = gameObject;
         newAgentBullet.Sprite.flipX = !isFacingLeft;
         newAgentBullet.Direction = -newAgentBullet.transform.right * speed / 2;

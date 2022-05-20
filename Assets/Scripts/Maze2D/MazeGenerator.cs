@@ -1,4 +1,4 @@
-п»їusing System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MazeGenerator
@@ -14,7 +14,7 @@ public class MazeGenerator
         {
             for (int y = 0; y < cells.GetLength(1); y++)
             {
-                cells[x, y] = new MazeGeneratorCell {X = x, Y = y};
+                cells[x, y] = new MazeGeneratorCell { X = x, Y = y };
             }
         }
 
@@ -35,10 +35,10 @@ public class MazeGenerator
         maze.cells = cells;
         maze.finishPosition = PlaceMazeExit(cells);
 
-        // РёС‰РµРј РјРµСЃС‚Р° РґР»СЏ РїСЂРёР·СЂР°РєРѕРІ 
-        // РїСЂРёР·РЅР°Рє РїРѕРґС…РѕРґСЏС‰РµР№ РєР»РµС‚РєРё:
-        // 1) РѕС‚ СЃС‚РµРЅРєРё РґРѕ СЃС‚РµРЅРєРё >4 РєР»РµС‚РѕРє
-        // 2) РІС‹С…РѕРґ РЅРµ РёР· РєСЂР°Р№РЅРµР№ РєР»РµС‚РєРё
+        // ищем места для призраков 
+        // признак подходящей клетки:
+        // 1) от стенки до стенки >4 клеток
+        // 2) выход не из крайней клетки
 
         var ghostsG = new List<MazePoint>();
 
@@ -66,13 +66,11 @@ public class MazeGenerator
 
         /*
         var ghostsV = new List<MazePoint>();
-
         for (int i = 0; i < Width; i++)
         {
             for (int j = 0; j < Height; j++)
             {
                 var counter = 0;
-
                 for (int k = j; k < Height; k++)
                 {
                     if (!maze.cells[k, i].WallBottom)

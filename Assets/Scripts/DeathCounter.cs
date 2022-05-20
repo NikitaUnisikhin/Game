@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class DeathCounter : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     private Text textUIDeathCount;
-    
+
     private static int deathCount = 0;
     public static DeathCounter deathCounter;
 
@@ -15,7 +15,7 @@ public class DeathCounter : MonoBehaviour
     }
     public static void drawText()
     {
-        deathCounter.textUIDeathCount.text = "Смертей:  " + deathCount;
+        deathCounter.textUIDeathCount.text = "???????:  " + deathCount;
     }
 
     public static void resetDeathCount()

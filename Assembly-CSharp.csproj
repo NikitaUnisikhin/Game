@@ -59,13 +59,11 @@
     <Compile Include="Assets\Scripts\MoveableMonster.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Maze2D\HintRenderer.cs" />
-    <Compile Include="Assets\Sprites\Free 2D Cartoon Parallax Background\Demo\Script\ParallaxBackground_0.cs" />
     <Compile Include="Assets\Scripts\Bonus.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\Robber.cs" />
     <Compile Include="Assets\Scripts\Maze2D\MazeGenerator.cs" />
     <Compile Include="Assets\Scripts\DeathCounter.cs" />
-    <Compile Include="Assets\Scripts\Maze2D\Maze.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Cannon.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
@@ -81,10 +79,10 @@
     <Compile Include="Assets\Scripts\SuperJump.cs" />
     <Compile Include="Assets\Scripts\LivesBar.cs" />
     <Compile Include="Assets\Scripts\Doctor.cs" />
+    <Compile Include="Assets\Scripts\Maze2D\Ghost.cs" />
     <Compile Include="Assets\Scripts\Maze2D\Finish.cs" />
     <Compile Include="Assets\Scripts\GameProjectile.cs" />
     <Compile Include="Assets\Scripts\CatAgent.cs" />
-    <Compile Include="Assets\Sprites\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
     <Compile Include="Assets\Scripts\Maze2D\MazeSpawner.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\Transition.cs" />
@@ -96,7 +94,7 @@
     <Compile Include="Assets\Scripts\Maze2D\Cell.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
-    <Compile Include="Assets\Scripts\Maze2D\Ghost.cs" />
+    <Compile Include="Assets\Scripts\Maze2D\Maze.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

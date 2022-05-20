@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();   
+        audio = GetComponent<AudioSource>();
     }
 
     public void ClickButton(string nameOfScene)

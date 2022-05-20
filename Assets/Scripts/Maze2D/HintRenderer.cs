@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class HintRenderer : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class HintRenderer : MonoBehaviour
         Maze maze = MazeSpawner.maze;
         int x = maze.finishPosition.x;
         int y = maze.finishPosition.y;
-        Instantiate(Finish,new Vector3(x, y, 0), Quaternion.identity);
+        Instantiate(Finish, new Vector3(x, y, 0), Quaternion.identity);
     }
 
     public void AddGhosts()

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class PlayerControls : Unit
 {
@@ -32,7 +32,7 @@ public class PlayerControls : Unit
             sprite.flipX = true;
             State = CharStateMaze.Run;
             componentRigidbody.velocity += Vector2.left * Speed;
-            
+
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {

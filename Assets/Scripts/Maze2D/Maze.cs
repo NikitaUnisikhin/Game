@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Maze
@@ -21,7 +21,7 @@ public class MazePoint
     }
 }
 
-    public class MazeGeneratorCell
+public class MazeGeneratorCell
 {
     public int X;
     public int Y;
