@@ -25,6 +25,6 @@ public class MazeSpawner : MonoBehaviour
         }
 
         HintRenderer.DrawFinish();
-        // HintRenderer.AddGhosts();
+        HintRenderer.AddGhosts();
     }
 }

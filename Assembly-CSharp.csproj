@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Maze2D\MazeSpawner.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\Transition.cs" />
+    <Compile Include="Assets\Scripts\Maze2D\Maze.cs" />
     <Compile Include="Assets\Scripts\Mammoth.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="Assets\Scripts\Maze2D\Cell.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
-    <Compile Include="Assets\Scripts\Maze2D\Maze.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
