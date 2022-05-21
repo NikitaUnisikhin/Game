@@ -59680,6 +59680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MazeSpawner: {fileID: 2141250298}
   Finish: {fileID: 2832090856925027144, guid: 25d2e33222b7a6a43a23f9d067eeacbf, type: 3}
+  Ghost: {fileID: 8006048151772819428, guid: 0eb71a626a49d1f45bd68237e4baded5, type: 3}
 --- !u!120 &1780260980
 LineRenderer:
   m_ObjectHideFlags: 0
