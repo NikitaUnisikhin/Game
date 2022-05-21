@@ -21,7 +21,6 @@ public class LivesBarBoss : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(boss.Lives);
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < boss.Lives)

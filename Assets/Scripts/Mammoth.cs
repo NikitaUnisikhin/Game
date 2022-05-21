@@ -65,7 +65,9 @@ public class Mammoth : Boss
 
         if (unit && unit is Character)
         {
-            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.6F) ReceiveDamage();
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.9F
+                && Mathf.Abs(unit.transform.position.y - transform.position.y) > 0.6f)
+                ReceiveDamage();
             else
             {
                 unit.ReceiveDamage();

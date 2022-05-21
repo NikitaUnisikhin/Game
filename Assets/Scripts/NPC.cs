@@ -30,7 +30,7 @@ public class NPC : MonoBehaviour
         {
             panelDialog.SetActive(false);
             dialogeStart = false;
-            iter = 2;
+            iter = 0;
         }
     }
     void Update()

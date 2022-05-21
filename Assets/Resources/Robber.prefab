@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  radiusOfDamageToEnemy: 0.6
   groundCheck: {fileID: 3292477773336955113}
   groundLayers:
     serializedVersion: 2

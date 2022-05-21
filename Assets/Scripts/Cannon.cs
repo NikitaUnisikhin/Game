@@ -37,7 +37,9 @@ public class Cannon : Monster
 
         if (unit && unit is Character)
         {
-            if (Mathf.Abs(unit.transform.position.x - transform.position.x) < 0.3F) ReceiveDamage();
+            if (Mathf.Abs(unit.transform.position.x - transform.position.x - 0.5f) < 0.6F
+                && Mathf.Abs(unit.transform.position.y - transform.position.y) > 0.3f)
+                ReceiveDamage();
             else unit.ReceiveDamage();
         }
 
