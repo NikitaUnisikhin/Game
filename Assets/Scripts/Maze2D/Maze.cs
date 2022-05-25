@@ -4,8 +4,7 @@ using UnityEngine;
 public class Maze
 {
     public MazeGeneratorCell[,] cells;
-    public List<MazePoint> ghostsG;
-    public List<MazePoint> ghostsV;
+    public List<MazePoint> ghosts;
     public Vector2Int finishPosition;
 }
 

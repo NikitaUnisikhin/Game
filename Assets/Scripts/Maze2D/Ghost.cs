@@ -18,7 +18,7 @@ public class Ghost : Unit
     }
     protected void Update()
     {
-        Move();
+        // Move();
     }
 
     protected void OnTriggerEnter2D(Collider2D collider)

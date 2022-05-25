@@ -23,9 +23,9 @@ public class HintRenderer : MonoBehaviour
 
     public void AddGhosts()
     {
-        foreach (var cell in MazeSpawner.maze.ghostsG)
+        foreach (var cell in MazeSpawner.maze.ghosts)
         {
-            Instantiate(Ghost, new Vector3(cell.X - 0.5f, cell.Y - 2.5f, 0), Quaternion.identity);
+            Instantiate(Ghost, new Vector3(cell.X - 0.5f, cell.Y + 0.5f, 0), Quaternion.identity);
         }
     }
 }

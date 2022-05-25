@@ -35,64 +35,41 @@ public class MazeGenerator
         maze.cells = cells;
         maze.finishPosition = PlaceMazeExit(cells);
 
-        // ищем места для призраков 
-        // признак подходящей клетки:
-        // 1) от стенки до стенки >4 клеток
-        // 2) выход не из крайней клетки
-
-        var ghostsG = new List<MazePoint>();
+        var ghosts = new List<MazePoint>();
 
         for (int i = 0; i < Height; i++)
         {
-            for (int j = 0; j < Width; j++)
-            {
-                var counter = 0;
+            var start = 0;
+            var j = 1;
 
-                for (int k = j; k < Width; k++)
+            while (true)
+            {
+                while (true)
                 {
-                    if (!maze.cells[i, k].WallLeft)
-                        counter++;
-                    else if (counter < 3)
+                    if (j == Width - 1)
+                        break;
+
+                    if (maze.cells[j, i].WallLeft)
                         break;
                     else
-                    {
-                        ghostsG.Add(new MazePoint(i, k));
-                        j = k;
-                        break;
-                    }
+                        j++;
                 }
+
+                if (j == Width - 1)
+                    break;
+
+                if ((cells[j, i].X - cells[start, i].X) > 3)
+                    ghosts.Add(new MazePoint(j, i));
+
+                start = j;
+                j = start + 1;
+
+                if (j == Width - 1)
+                    break;
             }
         }
 
-        /*
-        var ghostsV = new List<MazePoint>();
-        for (int i = 0; i < Width; i++)
-        {
-            for (int j = 0; j < Height; j++)
-            {
-                var counter = 0;
-                for (int k = j; k < Height; k++)
-                {
-                    if (!maze.cells[k, i].WallBottom)
-                        counter++;
-                    else if (counter < 3)
-                        break;
-                    else
-                    {
-                        ghostsV.Add(new MazePoint(i, k));
-                        j = k;
-                        break;
-                    }
-                }
-            }
-        }
-        */
-
-        // 4 7
-        // 7 5
-
-        maze.ghostsG = ghostsG;
-        // maze.ghostsV = ghostsV;
+        maze.ghosts = ghosts;
 
         return maze;
     }
