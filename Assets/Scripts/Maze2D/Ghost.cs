@@ -18,7 +18,7 @@ public class Ghost : Unit
     }
     protected void Update()
     {
-        // Move();
+        Move();
     }
 
     protected void OnTriggerEnter2D(Collider2D collider)
@@ -33,9 +33,9 @@ public class Ghost : Unit
 
     private void Move()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up + transform.right * direction.x * 0.5F, 0.0001F);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.right * direction.x * 0.1F, 0.35F);
 
-        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<PlayerControls>()))
+        if (colliders.Length > 1 && colliders.All(x => !x.GetComponent<PlayerControls>()))
         {
             isFacingLeft = !isFacingLeft;
             speed = -speed;
