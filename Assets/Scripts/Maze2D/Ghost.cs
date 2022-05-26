@@ -29,6 +29,13 @@ public class Ghost : Unit
         {
             unit.ReceiveDamage();
         }
+
+        Bullet spear = collider.gameObject.GetComponent<Bullet>();
+
+        if (spear && spear.Parent != gameObject)
+        {
+            ReceiveDamage();
+        }
     }
 
     private void Move()

@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Maze2D\Cell.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\ShootingInMaze.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
