@@ -58,7 +58,7 @@ public class MazeGenerator
                 if (j == Width - 1)
                     break;
 
-                if ((cells[j, i].X - cells[start, i].X) > 3)
+                if ((cells[j, i].X - cells[start, i].X) > 2)
                     ghosts.Add(new MazePoint(j, i));
 
                 start = j;

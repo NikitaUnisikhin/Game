@@ -7,12 +7,14 @@ public class PlayerControls : Unit
     private SpriteRenderer sprite;
 
     private Rigidbody2D componentRigidbody;
-
+    
     private void Start()
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
         componentRigidbody = GetComponent<Rigidbody2D>();
+
+        var clips = GetComponents<AudioSource>();
     }
 
     private CharStateMaze State

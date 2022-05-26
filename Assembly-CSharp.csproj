@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\CatBoss.cs" />
     <Compile Include="Assets\Scripts\ShootableMonster.cs" />
     <Compile Include="Assets\Scripts\Invulnerable.cs" />
+    <Compile Include="Assets\Scripts\ShootingInMaze.cs" />
     <Compile Include="Assets\Scripts\Maze2D\PlayerControls3D.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
@@ -98,7 +99,6 @@
     <Compile Include="Assets\Scripts\Maze2D\Cell.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
-    <Compile Include="Assets\Scripts\ShootingInMaze.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

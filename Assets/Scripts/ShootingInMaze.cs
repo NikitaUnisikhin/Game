@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootingInMaze : MonoBehaviour
@@ -7,10 +5,12 @@ public class ShootingInMaze : MonoBehaviour
     private Bullet spear;
     private SpriteRenderer sprite;
     private Rigidbody2D componentRigidbody;
+    private AudioSource ShootClip;
     private float timer = 1f;
 
     protected void Awake()
     {
+        ShootClip = GetComponent<AudioSource>();
         spear = Resources.Load<Bullet>("SpearInMaze");
     }
 
@@ -35,6 +35,7 @@ public class ShootingInMaze : MonoBehaviour
 
     private void Shoot()
     {
+        ShootClip.Play();
         Vector3 position = transform.position; position.y += 0.1F;
         Bullet newBullets = Instantiate(spear, position, spear.transform.rotation);
 
