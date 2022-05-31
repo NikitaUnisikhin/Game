@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637890926639309676
+      ticks: 637895997037855998
     m_Hash: 1082240786
   m_LockFileStatus:
     m_FilePath: C:/Repos/Game/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637890926639309676
+      ticks: 637895997037855998
     m_Hash: 407264249
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -126,6 +126,7 @@ m_PackageAssets:
         - 7.0.3
         - 7.0.4
         - 7.0.5
+        - 7.0.6
         - 8.0.0-pre.3
         - 8.0.0-pre.4
         - 8.0.0
