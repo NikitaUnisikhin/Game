@@ -59,7 +59,6 @@
     <Compile Include="Assets\Scripts\MoveableMonster.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Maze2D\HintRenderer.cs" />
-    <Compile Include="Assets\Sprites\Free 2D Cartoon Parallax Background\Demo\Script\ParallaxBackground_0.cs" />
     <Compile Include="Assets\Scripts\Bonus.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\Robber.cs" />
@@ -74,7 +73,6 @@
     <Compile Include="Assets\Scripts\ShootableMonster.cs" />
     <Compile Include="Assets\Scripts\Invulnerable.cs" />
     <Compile Include="Assets\Scripts\ShootingInMaze.cs" />
-    <Compile Include="Assets\Scripts\Maze2D\PlayerControls3D.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Scripts\Acceleration.cs" />
@@ -86,7 +84,6 @@
     <Compile Include="Assets\Scripts\Maze2D\Finish.cs" />
     <Compile Include="Assets\Scripts\GameProjectile.cs" />
     <Compile Include="Assets\Scripts\CatAgent.cs" />
-    <Compile Include="Assets\Sprites\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
     <Compile Include="Assets\Scripts\Maze2D\MazeSpawner.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\Transition.cs" />

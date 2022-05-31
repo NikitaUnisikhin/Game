@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControls : Unit
 {
@@ -21,6 +22,11 @@ public class PlayerControls : Unit
     {
         get { return (CharStateMaze)animator.GetInteger("State"); }
         set { animator.SetInteger("State", (int)value); }
+    }
+
+    public override void ReceiveDamage()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     private void Update()
