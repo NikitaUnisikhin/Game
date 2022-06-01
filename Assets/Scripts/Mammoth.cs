@@ -6,9 +6,9 @@ using UnityEngine;
 public class Mammoth : Boss
 {
     [SerializeField]
-    private float speed = 2.0F;
+    private float speed = 3.0F;
 
-    private const float constantSpeed = 2.0F;
+    private const float constantSpeed = 3.0F;
     private const float time = 2.0F;
 
     private Vector3 direction;
